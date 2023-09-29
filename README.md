@@ -12,3 +12,5 @@ This project seeks to allow and motivate more individuals to learn sign language
 an application that translate text input into corresponding sign language gestures. Not only will 
 this take steps to solve the communication barrier but also provide an engaging method for 
 individuals to learn and understand sign language. 
+
+i like cats
