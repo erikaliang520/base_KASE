@@ -14,4 +14,4 @@ this application will also take in speech input, translate it to text, and then 
 corresponding sign language gesture. Not only will this take steps to solve the communication 
 barrier but also provide an engaging method for individuals to learn and understand sign language. 
 
-i like dogs
+i like dogs i also like cats no because mimi and pumpkin 
