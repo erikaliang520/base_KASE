@@ -7,8 +7,9 @@ Today, there is still a significant communication barrier between individuals wh
 as those who do not understand sign language. 
 There are a significant amount of individuals who do not understand sign language but would like
 to learn. However, learning sign language proves to be a challenging task due to the lack of 
-interactive and user-friendly resources, 
+interactive and user-friendly resources.  
 This project seeks to allow and motivate more individuals to learn sign language by developing 
-an application that translate text input into corresponding sign language gestures. Not only will 
-this take steps to solve the communication barrier but also provide an engaging method for 
-individuals to learn and understand sign language. 
+an application that translate text input into corresponding sign language gestures. Moreover, 
+this application will also take in speech input, translate it to text, and then display the 
+corresponding sign language gesture. Not only will this take steps to solve the communication 
+barrier but also provide an engaging method for individuals to learn and understand sign language. 
