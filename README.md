@@ -40,5 +40,13 @@ We believe this solution has potential to increase communication
 and promote inclusivity for deaf and hard-of-hearing communities while offering an 
 easy-to-use method for individuals interested in learning sign language.
 
+## Link to API Documentation
+
+Google's Speech-to-Text - https://cloud.google.com/speech-to-text/docs#docs
+YouTube Data - https://developers.google.com/youtube/v3/docs
+
+
+
+
 
 
