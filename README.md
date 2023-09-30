@@ -45,7 +45,6 @@ easy-to-use method for individuals interested in learning sign language.
 Google's Speech-to-Text - https://cloud.google.com/speech-to-text/docs#docs
 YouTube Data - https://developers.google.com/youtube/v3/docs
 
-![Postman Youtube API.png](..%2F..%2FDesktop%2FPostman%20Youtube%20API.png)
 
 
 
