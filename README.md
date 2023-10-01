@@ -53,6 +53,8 @@ Expected Results When Calling Code in Java
 Testing YouTube API on Google
 <img width="1509" alt="Expected Results when Calling in Java" src="https://github.com/erikaliang520/base_KASE/assets/113625685/5c5d3065-d34f-4804-81f2-7d0e9a5ac4d4">
 
+We sent a GET request to the Youtube Api server on postman, since we're requesting data on a search relevant to our filters.
+
 We used GET for the use case list (by keyword). It needs access to our API key, and we used parameters and filters for:
 part = snippet
 max Results = 3
@@ -60,7 +62,6 @@ q = "ASL letter a"
 
 The results return the max Result amount of youtube videos found using the search list API. It also includes attributes like potential video height/width sizes, video title, channel name, duration, etc.
 
-We sent a GET request to the Youtube Api server on postman, since we're requesting data on a search relevant to our filters.
 
 ## Java Code Process and Technical Problems
 
