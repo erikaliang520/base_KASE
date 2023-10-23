@@ -21,20 +21,21 @@ Our team is developing an application designed to bridge the communication gap b
 individuals who use sign language and those who do not. This application will serve 
 as a interactive and engaging platform for learning and understanding sign language. 
 
+
 The core functionalities of the application:
 
 - Translating text input into corresponding sign language gestures displayed through YouTube videos.
-- Converting speech input into text using Google's Speech-to-Text API, which is then 
-translated into corresponding sign language gestures represented via videos sourced from YouTube.
+- Creating personalized lessons for new users based on their learning goals and current knowledge 
+of Sign Language. 
 
 The user interface will be designed to ensure accessibility and ease-of-use for all users. 
-The application uses Google's Speech-to-Text API for accurate voice recognition, along with 
+The application uses OpenAI API to create personalized lesson plans along with 
 the YouTube API to provide a vast library of sign language gesture videos.
 
-In essence, our application acts as an interpreter and translator, translating spoken 
-or written words into sign language through relevant video content. 
+In essence, our application acts as an interpreter and teacher, translating written words into sign 
+language through relevant video content and providing unique lessons tailored to each user. 
 Additionally, it serves as an educational tool that enables users to learn sign language 
-at their own pace 
+at their own pace .
 
 We believe this solution has potential to increase communication 
 and promote inclusivity for deaf and hard-of-hearing communities while offering an 
@@ -42,8 +43,9 @@ easy-to-use method for individuals interested in learning sign language.
 
 ## Link to API Documentation
 
-Google's Speech-to-Text - https://cloud.google.com/speech-to-text/docs#docs
 YouTube Data - https://developers.google.com/youtube/v3/docs
+Open AI - https://platform.openai.com/docs/plugins/getting-started
+
 
 ## Using Postman to Try Out YouTube API
 
