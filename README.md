@@ -15,6 +15,8 @@ this application will also take in speech input, translate it to text, and then 
 corresponding sign language gesture. Not only will this take steps to solve the communication 
 barrier but also provide an engaging method for individuals to learn and understand sign language.
 
+test - addison
+
 ## Description of Application 
 
 Our team is developing an application designed to bridge the communication gap between 
