@@ -2,20 +2,27 @@
 
 ## Description of Problem Domain
 
-Our team focuses on the intersecting domain of accessibility, communication, and education. 
-Today, there is still a significant communication barrier between individuals who use sign language 
-as those who do not understand sign language. 
-There are a significant amount of individuals who do not understand sign language but would like
-to learn. However, learning sign language proves to be a challenging task due to the lack of 
-interactive and user-friendly resources.  
+In today's interconnected world where open access to the internet and travel have brought people from diverse 
+cultures closer together, proper communication is more imperative than ever.
+Living in Canada, a melting pot of cultures, the ability to communicate in different languages is not just desirable,
+but essential to forster understanding and inclusivity.
+Recognizing the significance of proper communication in this global landscape, 
+our team looks to contribute to the intersecting domain of accessibility and communication. 
 
-This project seeks to allow and motivate more individuals to learn sign language by developing 
-an application that translate text input into corresponding sign language gestures. Moreover, 
-this application will also take in speech input, translate it to text, and then display the 
-corresponding sign language gesture. Not only will this take steps to solve the communication 
-barrier but also provide an engaging method for individuals to learn and understand sign language.
+This project seeks to provide language translation access for users and our primary goal is to provide users 
+with seamless language translation capabilities.
+Our application allows users to input text in one language and translates this text input into the desired language. 
 
-test - addison
+Moreover, this application will go a step further by incorporating a text-to-speech feature for translated words.
+This will enhance accessibility by providing and audio version of the translated text which is especially beneficial 
+for individuals with visual impairments or who prefer auditory learning.
+Not only will this take steps to solve the language barrier between individuals 
+but also provide audio assistance for individuals to learn and understand new languages.
+
+This approach of our project not only seeks to break down language barriers but encourages language
+exploration and learning. By combining translation services with audio assistance, we aim to create a tool that
+can help individuals forster a deeper appreciation for linguistic diversity. Through our commitment to 
+accessibility and communication, we strive to contribute to a more inclusive and connected world.  
 
 ## Description of Application 
 
@@ -26,22 +33,17 @@ as a interactive and engaging platform for learning and understanding sign langu
 
 The core functionalities of the application:
 
-- Translating text input into corresponding sign language gestures displayed through YouTube videos.
-- Creating personalized lessons for new users based on their learning goals and current knowledge 
-of Sign Language. 
+- Translating user text inputs into desired language text outputs. 
+- Using text-to-speech features to create audio clips of user text inputs
+- Saving a history of past words, translations, languages, and audios
+- Generating suggested words of interest that may be laterally related to the user inputs
 
 The user interface will be designed to ensure accessibility and ease-of-use for all users. 
-The application uses OpenAI API to create personalized lesson plans along with 
-the YouTube API to provide a vast library of sign language gesture videos.
+The application uses Google Cloud APIs such as their translation and text-to-speech APIs. 
+The translation API will be used to provide swift on-the-spot translations of user text inputs in a variety 
+of desired languages. The text-to-speech API will provide the text-to-speech audio of the translated 
+output words using different language and accent bases.
 
-In essence, our application acts as an interpreter and teacher, translating written words into sign 
-language through relevant video content and providing unique lessons tailored to each user. 
-Additionally, it serves as an educational tool that enables users to learn sign language 
-at their own pace .
-
-We believe this solution has potential to increase communication 
-and promote inclusivity for deaf and hard-of-hearing communities while offering an 
-easy-to-use method for individuals interested in learning sign language.
 
 ## Link to API Documentation
 
