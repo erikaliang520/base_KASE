@@ -2,11 +2,21 @@ plugins {
     id 'java'
 }
 
-group = 'org.example'
+group = 'api'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+
+// Updated source set configuration to move API code
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/api' // Update the source directory
+        }
+    }
 }
 
 dependencies {
