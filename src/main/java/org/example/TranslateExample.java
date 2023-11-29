@@ -13,7 +13,9 @@ public class TranslateExample {
         // String credentialsPath = System.getenv("GOOGLE_APPLICATION_CREDENTIALS");
 
         // Couldn't get the environment variable working, so just used direct path, subject to change...
-        String credentialsPath = "concrete-keel-405101-72dc4015a5c4.json";
+
+        // Update: changed name of .json file to api_key.json, user should enter api key details client side
+        String credentialsPath = "api_key.json";
 
         Translate translate = TranslateOptions.newBuilder()
                 .setCredentials(GoogleCredentials.fromStream(new FileInputStream(credentialsPath)))
