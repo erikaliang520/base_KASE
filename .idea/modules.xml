@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/base_KASE.iml" filepath="$PROJECT_DIR$/.idea/base_KASE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J repo copy.iml" filepath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J repo copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_KASE.iml" filepath="$PROJECT_DIR$/base_KASE.iml" />
     </modules>
   </component>
 </project>
