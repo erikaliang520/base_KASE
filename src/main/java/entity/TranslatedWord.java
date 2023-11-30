@@ -1,18 +1,30 @@
 package entity;
 
-public interface TranslatedWord {
+public class TranslatedWord implements Word {
 
-    String get_original_word();
+    private final String word;
 
-    String get_translated_word();
+    private final String language;
 
-    String get_original_language();
+    private final String audioPathFile;
 
-    String get_translate_language();
+    TranslatedWord(String inputWord, String inputLanguage, String audioFile){
+        this.word = inputWord;
+        this.language = inputLanguage;
+        this.audioPathFile = audioFile;
+    }
 
-    String get_translated_audio_file();
+    @Override
+    public String getWord() {
+        return this.word;
+    }
 
+    @Override
+    public String getLanguage() {
+        return this.language;
+    }
 
-
-
+    public String getAudioPathFileName() {
+        return this.audioPathFile;
+    }
 }
