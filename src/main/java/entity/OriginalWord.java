@@ -8,12 +8,12 @@ public class OriginalWord implements Word{
 
     private final String language;
 
-    private ArrayList<String> relatedWords;
+    //private ArrayList<String> relatedWords;
 
     OriginalWord(String userWord, String userLanguage){
         this.word = userWord;
         this.language = userLanguage;
-        this.relatedWords = new ArrayList<>();
+        //this.relatedWords = new ArrayList<>();
     }
 
     @Override
@@ -26,7 +26,7 @@ public class OriginalWord implements Word{
         return this.language;
     }
 
-    public void addRelatedWords(ArrayList<String> relatedList) {
-        this.relatedWords = relatedList;
-    }
+    //public void addRelatedWords(ArrayList<String> relatedList) {
+    //    this.relatedWords = relatedList;
+    //}
 }

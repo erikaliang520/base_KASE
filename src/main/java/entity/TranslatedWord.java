@@ -6,12 +6,12 @@ public class TranslatedWord implements Word {
 
     private final String language;
 
-    private final String audioPathFile;
+    //private final String audioPathFile;
 
-    TranslatedWord(String inputWord, String inputLanguage, String audioFile){
+    TranslatedWord(String inputWord, String inputLanguage){
         this.word = inputWord;
         this.language = inputLanguage;
-        this.audioPathFile = audioFile;
+        //this.audioPathFile = audioFile;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class TranslatedWord implements Word {
         return this.language;
     }
 
-    public String getAudioPathFileName() {
-        return this.audioPathFile;
-    }
+    //public String getAudioPathFileName() {
+    //    return this.audioPathFile;
+    //}
 }
