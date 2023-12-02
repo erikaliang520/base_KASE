@@ -45,7 +45,7 @@ public class WordHistoryManagerTest {
     }
 
     @org.junit.Test
-    void saveAndRetrieveWord() {
+    public void saveAndRetrieveWord() {
         historyManager.save(originalWord1, translatedWord1);
         Word retrievedTranslation = historyManager.getTranslatedWord(originalWord1);
         assertEquals(translatedWord1.getWord(), retrievedTranslation.getWord());
@@ -53,7 +53,7 @@ public class WordHistoryManagerTest {
     }
 
     @org.junit.Test
-    void saveAndClearHistory() {
+    public void saveAndClearHistory() {
         historyManager.save(originalWord2, translatedWord2);
         historyManager.clearWordHistory();
         Word retrievedTranslation = historyManager.getTranslatedWord(originalWord2);

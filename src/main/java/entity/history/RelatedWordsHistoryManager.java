@@ -1,4 +1,4 @@
-package history;
+package entity.history;
 
 import java.io.*;
 import java.util.ArrayList;
