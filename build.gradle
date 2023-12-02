@@ -15,6 +15,14 @@ dependencies {
     implementation platform('com.google.cloud:libraries-bom:26.26.0')
     implementation 'com.google.cloud:google-cloud-bigquery'
     implementation 'com.google.cloud:google-cloud-translate:2.30.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
 test {

@@ -8,7 +8,7 @@ public class TranslatedWord implements Word {
 
     //private final String audioPathFile;
 
-    TranslatedWord(String inputWord, String inputLanguage){
+    public TranslatedWord(String inputWord, String inputLanguage){
         this.word = inputWord;
         this.language = inputLanguage;
         //this.audioPathFile = audioFile;

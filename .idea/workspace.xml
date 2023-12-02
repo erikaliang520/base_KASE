@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="placing entities into entity package">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface.">
+      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/word_file_small.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/OriginalWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/OriginalWord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/TranslatedWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/TranslatedWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/WordHistoryManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,29 +86,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "word__history__manager__test",
+    "jdk.selected.JAVA_MODULE": "20",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="entity" />
@@ -125,7 +127,8 @@
       <workItem from="1701110589069" duration="338000" />
       <workItem from="1701110959591" duration="4831000" />
       <workItem from="1701310204148" duration="6932000" />
-      <workItem from="1701376328261" duration="3612000" />
+      <workItem from="1701376328261" duration="6470000" />
+      <workItem from="1701489550141" duration="1171000" />
     </task>
     <task id="LOCAL-00001" summary="Modified description of problem domain and description fo application.">
       <option name="closed" value="true" />
@@ -167,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701320965242</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface.">
+      <option name="closed" value="true" />
+      <created>1701380010682</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701380010682</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +190,7 @@
     <MESSAGE value="Create interface HistoryManager and 3 classes using the interface." />
     <MESSAGE value="Untracked files need to be committed" />
     <MESSAGE value="placing entities into entity package" />
-    <option name="LAST_COMMIT_MESSAGE" value="placing entities into entity package" />
+    <MESSAGE value="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface." />
   </component>
 </project>

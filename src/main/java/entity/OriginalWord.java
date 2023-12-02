@@ -10,7 +10,7 @@ public class OriginalWord implements Word{
 
     //private ArrayList<String> relatedWords;
 
-    OriginalWord(String userWord, String userLanguage){
+    public OriginalWord(String userWord, String userLanguage){
         this.word = userWord;
         this.language = userLanguage;
         //this.relatedWords = new ArrayList<>();
