@@ -1,14 +1,17 @@
 package entity;
 
-public class TranslatedWord implements Word {
+public class TranslatedWordSpeech implements Word{
 
     private final String word;
 
     private final String language;
 
-    public TranslatedWord(String inputWord, String inputLanguage){
+    private final String audioPathFile;
+
+    public TranslatedWordSpeech(String inputWord, String inputLanguage, String audioFile){
         this.word = inputWord;
         this.language = inputLanguage;
+        this.audioPathFile = audioFile;
     }
 
     @Override
@@ -19,6 +22,10 @@ public class TranslatedWord implements Word {
     @Override
     public String getLanguage() {
         return this.language;
+    }
+
+    public String getAudioPathFileName() {
+        return this.audioPathFile;
     }
 
 }

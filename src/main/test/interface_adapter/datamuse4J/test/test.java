@@ -1,9 +1,9 @@
-package interface_adapter.Datamuse4J.test;
+package interface_adapter.datamuse4J.test;
 
 class test {
 
     public static void main(String[] args) {
-        datamuse.DatamuseQuery dQuery = new datamuse.DatamuseQuery();
+        interface_adapter.datamuse4J.src.datamuse.DatamuseQuery dQuery = new interface_adapter.datamuse4J.src.datamuse.DatamuseQuery();
 
         String s = dQuery.findAdjByTopicRelativity("soccer", "sport");
 
