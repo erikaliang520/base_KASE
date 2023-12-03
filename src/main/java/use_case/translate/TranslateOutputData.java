@@ -9,4 +9,8 @@ public class TranslateOutputData {
         this.original = original;
         this.translated = translated;
     }
+
+    public String getTranslated() {
+        return translated;
+    }
 }

@@ -9,7 +9,8 @@ public class TranslateInteractor implements TranslateInputBoundary {
     private final TranslateService translateService;
 
     private final TranslateOutputBoundary translatePresenter;
-    public TranslateInteractor(TranslateService translateService, TranslateOutputBoundary translatePresenter) {
+    public TranslateInteractor(TranslateService translateService,
+                               TranslateOutputBoundary translatePresenter) {
         this.translateService = translateService;
         this.translatePresenter = translatePresenter;
     }
@@ -19,11 +20,11 @@ public class TranslateInteractor implements TranslateInputBoundary {
         String original = translateInputData.getWord();
         String translated = translateService.performTranslate(original);
 
-        TranslateOutputData translation = new TranslateOutputData(original, translated);
+        TranslateOutputData translateOutputData = new TranslateOutputData(original, translated);
 
         // TODO add translation to WordHistory using a DAO
 
-        translatePresenter.prepareSuccessView(translation);
+        translatePresenter.prepareSuccessView(translateOutputData);
 
     }
 }
