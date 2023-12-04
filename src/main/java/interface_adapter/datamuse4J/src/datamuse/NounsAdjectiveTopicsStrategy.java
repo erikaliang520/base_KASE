@@ -2,12 +2,11 @@ package interface_adapter.datamuse4J.src.datamuse;
 
 import entity.related_words.RelatedWordsSelectionStrategy;
 
-import java.util.List
+import java.util.ArrayList;
+import java.util.List;
 
-t;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import static interface_adapter.datamuse4J.src.datamuse.DatamuseQuery.getWordScores;
@@ -21,20 +20,14 @@ public class NounsAdjectiveTopicsStrategy implements RelatedWordsSelectionStrate
         this.topic = developerTopic;
     }
 
-    public static List<String> filterTopWordsWithMinimum(List
-
-t<WordScore> wordScores, int topN, int minScore) {
+    public static List<String> filterTopWordsWithMinimum(List<WordScore> wordScores, int topN, int minScore) {
         List<WordScore> filteredWords = wordScores.stream()
                 .filter(wordScore -> wordScore.getIntScore() >= minScore)
                 .sorted(Comparator.comparingInt(WordScore::getIntScore).reversed())
                 .limit(topN)
                 .collect(Collectors.toList());
 
-        List
-
-t<String> result = new List
-
-t<>();
+        List<String> result = new ArrayList<>();
         for (WordScore wordScore : filteredWords) {
             result.add(wordScore.getWord());
         }

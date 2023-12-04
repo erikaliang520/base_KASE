@@ -5,14 +5,22 @@
 * as published by Sam Hocevar. See the COPYING file for more details.
 */
 
-package datamuse;
+package interface_adapter.datamuse4J.src.datamuse;
 
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+
+// chat gpt
+import com.fasterxml.jackson.core.type.TypeReference;
 
 /**
  * A handler for making calls to the Datamuse RESTful API.
@@ -68,7 +76,7 @@ public class DatamuseQuery {
         return getJSON("http://api.datamuse.com/words?rel_jja="+s+"&topics"+q);
     }
 
-    public String findAdjByTopicRelativity(String word, String topic){
+    public static String findAdjByTopicRelativity(String word, String topic){
         String s = word.replaceAll(" ", "+");
         String q = topic.replaceAll(" ", "+");
 
@@ -161,7 +169,7 @@ public class DatamuseQuery {
      * @param url The page's URL.
      * @return The source code.
      */
-    private String getJSON(String url) {
+    private static String getJSON(String url) {
         URL datamuse;
         URLConnection dc;
         StringBuilder s = null;
@@ -181,4 +189,53 @@ public class DatamuseQuery {
         }
         return s != null ? s.toString() : null;
     }
+
+    // chat gpt
+    List<String> parseJsonString(String jsonString) {
+        List<String> result = new ArrayList<>();
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode root = objectMapper.readTree(jsonString);
+
+            // Assuming the JSON structure is an array of strings
+            if (root.isArray()) {
+                for (JsonNode node : root) {
+                    result.add(node.asText());
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public static List<WordScore> getWordScores(String jsonString) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.readValue(jsonString, new TypeReference<List<WordScore>>() {});
+        } catch (IOException e) {
+            // Log the exception or handle it more gracefully
+            System.err.println("An error occurred while parsing the JSON data: " + e.getMessage());
+            // If you are in a non-interactive environment, you might want to throw a custom exception or return null
+            return null;
+        }
+    }
+
+
+    // testing that the new parser for the list of word socres work:
+    public static void main(String[] args) {
+        String jsonString = findAdjByTopicRelativity("soccer", "sport");
+
+        List<WordScore> wordScores = getWordScores(jsonString);
+
+        if (wordScores != null) {
+            for (WordScore wordScore : wordScores) {
+                System.out.println("Word: " + wordScore.getWord() + ", Score: " + wordScore.getScore());
+            }
+        } else {
+            // Handle the case where an exception occurred during parsing
+            System.out.println("Failed to parse JSON data. Please check the input.");
+        }
+    }
+
 }
