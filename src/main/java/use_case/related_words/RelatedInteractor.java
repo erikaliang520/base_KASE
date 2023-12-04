@@ -3,6 +3,8 @@ package use_case.related_words;
 import entity.Word;
 import entity.factories.WordFactory;
 
+import java.util.List;
+
 public class RelatedInteractor implements RelatedInputBoundary {
     final RelatedWordDataAccessInterface relatedDataAccessObject;
     final RelatedOutputBoundary relatedPresenter;
@@ -17,6 +19,20 @@ public class RelatedInteractor implements RelatedInputBoundary {
     @Override
     public void execute(RelatedInputData relatedInputData) {
 
+        String originalWord = relatedInputData.getWord();
+        List<String> generatedWords = relatedInputData.getStrategy().selectTopWordsStrategy(originalWord);
+
+        // when the list of generated words is NOT empty:
+        if (!generatedWords.isEmpty()){
+            Word word = relatedWordFactory.createWord(relatedInputData.getWord(), relatedInputData.getLanguage(), generatedWords);
+            relatedPresenter.prepareSuccessView(word);
+        } else {
+            relatedPresenter.prepareFailView("No suggestions available for your word(s) at this moment.");
+
+        }
+
+
+        // when it is:
         // TODO idk if this is necessary since the translation already happened before this use case can pop off:
         Word word = relatedWordFactory.createWord(relatedInputData.getWord(), relatedInputData.getLanguage());
 
@@ -24,7 +40,7 @@ public class RelatedInteractor implements RelatedInputBoundary {
         relatedDataAccessObject.save(word);
 
         RelatedOutputData relatedOutputData = new RelatedOutputData(relatedInputData.getWord(), relatedInputData.getLanguage(),relatedInputData.getStrategy());
-        relatedPresenter.prepareView(relatedOutputData);
+        relatedPresenter.prepareSuccessView(relatedOutputData);
 
 
     }

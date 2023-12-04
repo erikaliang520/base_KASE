@@ -2,7 +2,7 @@ package interface_adapter.test.history;
 import entity.OriginalWord;
 import entity.TranslatedWord;
 import entity.Word;
-import entity.history.WordHistoryManager;
+import data_access.history.WordHistoryManager;
 
 import java.io.IOException;
 

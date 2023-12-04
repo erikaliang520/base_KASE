@@ -1,4 +1,7 @@
-package entity.history;
+package data_access.history;
+
+import entity.Word;
+import use_case.related_words.RelatedWordDataAccessInterface;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -6,7 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class RelatedWordsHistoryManager implements HistoryManager {
+public class RelatedWordsHistoryManager implements HistoryManager, RelatedWordDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<String, ArrayList<String>> relatedWordsHistory = new HashMap<>();
@@ -66,5 +69,9 @@ public class RelatedWordsHistoryManager implements HistoryManager {
         save();
     }
 
+    @Override
+    public void save(Word word) {
+
+    }
 }
 
