@@ -5,6 +5,7 @@ package data_access.history;
 import entity.OriginalWord;
 import entity.TranslatedWord;
 import entity.Word;
+import entity.factories.WordFactory;
 import use_case.history.HistoryDataAccessInterface;
 
 import java.io.*;
@@ -17,6 +18,8 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<Word, Word>  wordHistory = new HashMap<>();
 
+    private WordFactory wordFactory;
+
     public WordHistoryDataAccessObject(String csvpath) throws IOException {
 
         csvFile = new File(csvpath);
@@ -28,14 +31,16 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
         } else {
 
             try (BufferedReader reader = new BufferedReader(new FileReader(csvFile))) {
-                //String header = reader.readLine();
+                String header = reader.readLine();
 
                 String row;
                 while ((row = reader.readLine()) != null) {
                     String[] col = row.split(",");
-                    OriginalWord originalWord = new OriginalWord(col[0], "eng");
-                    TranslatedWord translatedWord = new TranslatedWord(col[1], "fr");
+                    String originalString = String.valueOf(col[headers.get("original_word")]);
+                    String translatedString = String.valueOf(col[headers.get("translated_word")]);
                     // Load word history
+                    Word originalWord = wordFactory.createWord(originalString, "eng");
+                    Word translatedWord = wordFactory.createWord(translatedString, "fr");
                     wordHistory.put(originalWord, translatedWord);
                 }
             }

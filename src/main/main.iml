@@ -35,8 +35,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Gradle: com.google.auth:google-auth-library-oauth2-http:1.20.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.cloud:google-cloud-translate:2.30.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.flatbuffers:flatbuffers-java:1.12.0" level="project" />
   </component>
 </module>
