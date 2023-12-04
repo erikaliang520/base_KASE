@@ -4,49 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Updating past old history version files">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/cloudtranslateapitest2.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateApiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/Translater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="history use case - pull req coming">
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateDataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J repo copy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/lib/quick-json-1.0.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/out/production/Datamuse4J/datamuse/DatamuseQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/out/production/Datamuse4J/datamuse/JSONParse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/test/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/TranslateExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/TranslateExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/save" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateApiClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/Translater.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/RelatedWords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordsList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/TranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TranslateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TranslateExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base_KASE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/HistoryManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/LanguageHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/history/LanguageHistoryDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/RelatedWordsHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/history/RelatedWordsHistoryDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/history/HistoryDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/history/HistoryDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -87,7 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="controllers" />
+        <entry key="$PROJECT_DIR$" value="history_usecases" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,6 +86,7 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2Y8fPOLfTOc0zuWh5x5jvI2eNfe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -236,6 +206,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Datamuse4J repo copy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Datamuse4J repo copy" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.test" />
       <item itemvalue="Application.DatamuseQuery" />
@@ -245,11 +228,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatamuseQuery" />
-        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
         <item itemvalue="Gradle.base_KASE [dependencies]" />
-        <item itemvalue="JUnit.WordHistoryManagerTest" />
+        <item itemvalue="Application.DatamuseQuery" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="history use case - pull req coming">
+      <option name="closed" value="true" />
+      <created>1701668740824</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701668740824</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,6 +382,7 @@
     <MESSAGE value="Comiting creational files for related words interface adapters, and a few edits in changing Array&lt;String&gt; implementations to List&lt;String&gt; to ensure more flexibility within variables." />
     <MESSAGE value="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies" />
     <MESSAGE value="Updating past old history version files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating past old history version files" />
+    <MESSAGE value="history use case - pull req coming" />
+    <option name="LAST_COMMIT_MESSAGE" value="history use case - pull req coming" />
   </component>
 </project>

@@ -2,7 +2,7 @@ package interface_adapter.test.history;
 import entity.OriginalWord;
 import entity.TranslatedWord;
 import entity.Word;
-import data_access.history.WordHistoryManager;
+import data_access.history.WordHistoryDataAccessObject;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WordHistoryManagerTest {
-    private WordHistoryManager historyManager;
+    private WordHistoryDataAccessObject historyManager;
     private Word originalWord1;
     private Word originalWord2;
     private Word translatedWord1;
@@ -23,7 +23,7 @@ public class WordHistoryManagerTest {
         String csvFilePath = "path/to/word_small.csv";
 
         try {
-            historyManager = new WordHistoryManager(csvFilePath);
+            historyManager = new WordHistoryDataAccessObject(csvFilePath);
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception appropriately
         }

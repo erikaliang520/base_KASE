@@ -5,18 +5,19 @@ package data_access.history;
 import entity.OriginalWord;
 import entity.TranslatedWord;
 import entity.Word;
+import use_case.history.HistoryDataAccessInterface;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class WordHistoryManager implements HistoryManager {
+public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<Word, Word>  wordHistory = new HashMap<>();
 
-    public WordHistoryManager(String csvpath) throws IOException {
+    public WordHistoryDataAccessObject(String csvpath) throws IOException {
 
         csvFile = new File(csvpath);
         headers.put("original_word", 0);

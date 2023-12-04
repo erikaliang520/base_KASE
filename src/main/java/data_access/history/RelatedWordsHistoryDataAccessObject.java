@@ -1,6 +1,7 @@
 package data_access.history;
 
 import entity.Word;
+import use_case.history.HistoryDataAccessInterface;
 import use_case.related_words.RelatedWordDataAccessInterface;
 
 import java.io.*;
@@ -9,12 +10,12 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class RelatedWordsHistoryManager implements HistoryManager, RelatedWordDataAccessInterface {
+public class RelatedWordsHistoryDataAccessObject implements HistoryDataAccessInterface, RelatedWordDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<String, ArrayList<String>> relatedWordsHistory = new HashMap<>();
 
-    public RelatedWordsHistoryManager(String csvpath) throws IOException {
+    public RelatedWordsHistoryDataAccessObject(String csvpath) throws IOException {
 
         csvFile = new File(csvpath);
         headers.put("original_word", 0);
