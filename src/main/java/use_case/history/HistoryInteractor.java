@@ -16,5 +16,4 @@ public class HistoryInteractor implements HistoryInputBoundary{
         HistoryOutputData historyOutputData = new HistoryOutputData(historyDataAccessObject.get());
         historyPresenter.prepareSuccessView(historyOutputData);
     }
-
 }
