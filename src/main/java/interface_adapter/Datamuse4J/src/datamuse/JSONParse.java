@@ -5,7 +5,7 @@
 * as published by Sam Hocevar. See the COPYING file for more details.
 */
 
-package datamuse;
+package interface_adapter.datamuse4J.src.datamuse;
 
 import com.json.parsers.JsonParserFactory;
 import com.json.parsers.JSONParser;
