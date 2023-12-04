@@ -11,7 +11,7 @@ public class TranslatedWordFactory implements WordFactory {
         return new TranslatedWord(userWord, userLanguage);
     }
 
-    public Word createWord(String userWord, String userLanguage,  String audioFile) {
+    public Word createWord(String userWord, String userLanguage, String audioFile) {
         return new TranslatedWordSpeech(userWord, userLanguage, audioFile);
     }
 }

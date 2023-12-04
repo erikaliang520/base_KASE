@@ -1,4 +1,4 @@
-package entity.history;
+package data_access.history;
 
 public interface HistoryManager {
 
