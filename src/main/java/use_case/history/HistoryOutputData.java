@@ -1,7 +1,6 @@
 package use_case.history;
 
 import entity.Word;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

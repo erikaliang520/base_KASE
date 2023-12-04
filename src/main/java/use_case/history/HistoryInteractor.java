@@ -22,5 +22,4 @@ public class HistoryInteractor implements HistoryInputBoundary{
             historyPresenter.prepareSuccessView(historyOutputData);
         }
     }
-
 }
