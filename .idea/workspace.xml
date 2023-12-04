@@ -4,15 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface.">
-      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/word_file_small.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Updating past old history version files">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/cloudtranslateapitest2.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateApiClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/Translater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/OriginalWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/OriginalWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/TranslatedWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/TranslatedWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J repo copy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/lib/quick-json-1.0.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/out/production/Datamuse4J/datamuse/DatamuseQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/out/production/Datamuse4J/datamuse/JSONParse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/test/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/TranslateExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/TranslateExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/save" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/Translater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/RelatedWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/TranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TranslateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TranslateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +61,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -50,15 +87,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="controllers" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;erikaliang520&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
@@ -70,7 +105,7 @@
     </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="ae7d04a4-df6a-4211-9981-e5ae677a0062" />
+        <option name="accountId" value="99a6bf9a-25cb-4b92-8f99-618482432533" />
         <option name="url" value="https://github.com/erikaliang520/base_KASE.git" />
       </UrlAndAccount>
     </option>
@@ -88,6 +123,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "limkaryna@gmail.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "ardent-firefly-399207",
+    "ACTIVE_CLOUD_PROJECT_NAME": "My First Project",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "292215651378",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -95,7 +134,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "word__history__manager__test",
+    "com.google.cloudcode.ide_session_index": "20231203_0000",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "20",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -104,14 +144,114 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.16920471",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/interface_adapter" />
+      <recent name="$PROJECT_DIR$/src/main/java/entity" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="entity" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.DatamuseQuery">
+    <configuration name="DatamuseQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.datamuse4J.src.datamuse.DatamuseQuery" />
+      <module name="base_KASE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interface_adapter.datamuse4J.src.datamuse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.datamuse4J.test.test" />
+      <module name="base_KASE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interface_adapter.datamuse4J.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="base_KASE [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="WordHistoryManagerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="base_KASE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interface_adapter.test.history.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="interface_adapter.test.history" />
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.WordHistoryManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordHistoryManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interface_adapter.test.history.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="interface_adapter.test.history" />
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.WordHistoryManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.DatamuseQuery" />
+      <item itemvalue="Gradle.base_KASE [dependencies]" />
+      <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
+      <item itemvalue="JUnit.WordHistoryManagerTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DatamuseQuery" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
+        <item itemvalue="Gradle.base_KASE [dependencies]" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -129,6 +269,10 @@
       <workItem from="1701310204148" duration="6932000" />
       <workItem from="1701376328261" duration="6470000" />
       <workItem from="1701489550141" duration="1171000" />
+      <workItem from="1701492556545" duration="11362000" />
+      <workItem from="1701565728499" duration="3746000" />
+      <workItem from="1701574046981" duration="26133000" />
+      <workItem from="1701653182836" duration="3534000" />
     </task>
     <task id="LOCAL-00001" summary="Modified description of problem domain and description fo application.">
       <option name="closed" value="true" />
@@ -178,11 +322,62 @@
       <option name="project" value="LOCAL" />
       <updated>1701380010682</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring History Manager files and testing files">
+      <option name="closed" value="true" />
+      <created>1701495499486</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701495499486</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Modified Entities to apply for all our use cases (or atleast they should), created use case element interfaces and classes, created strategy design patternw with how related words are computed, the concrete implementations are with interface adapters since they depend on knowing the low level implementations">
+      <option name="closed" value="true" />
+      <created>1701623102924</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701623102924</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Comiting creational files for related words interface adapters, and a few edits in changing Array&lt;String&gt; implementations to List&lt;String&gt; to ensure more flexibility within variables.">
+      <option name="closed" value="true" />
+      <created>1701652659048</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701652659048</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies">
+      <option name="closed" value="true" />
+      <created>1701655211197</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701655211197</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updating past old history version files">
+      <option name="closed" value="true" />
+      <created>1701655597436</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701655597436</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modified description of problem domain and description fo application." />
@@ -191,6 +386,11 @@
     <MESSAGE value="Untracked files need to be committed" />
     <MESSAGE value="placing entities into entity package" />
     <MESSAGE value="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface." />
+    <MESSAGE value="Refactoring History Manager files and testing files" />
+    <MESSAGE value="Modified Entities to apply for all our use cases (or atleast they should), created use case element interfaces and classes, created strategy design patternw with how related words are computed, the concrete implementations are with interface adapters since they depend on knowing the low level implementations" />
+    <MESSAGE value="Comiting creational files for related words interface adapters, and a few edits in changing Array&lt;String&gt; implementations to List&lt;String&gt; to ensure more flexibility within variables." />
+    <MESSAGE value="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies" />
+    <MESSAGE value="Updating past old history version files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating past old history version files" />
   </component>
 </project>
