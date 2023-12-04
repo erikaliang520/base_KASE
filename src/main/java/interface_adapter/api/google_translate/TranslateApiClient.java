@@ -1,4 +1,4 @@
-// package api;
+package interface_adapter.api.google_translate;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.translate.Translate;
@@ -29,8 +29,8 @@ public class TranslateApiClient {
         );
 
         // Print the results
-        System.out.println("Original Text: " + word);
-        System.out.println("Translated Text: " + translation.getTranslatedText());
+//        System.out.println("Original Text: " + word);
+//        System.out.println("Translated Text: " + translation.getTranslatedText());
 
         return translation.getTranslatedText();
     }

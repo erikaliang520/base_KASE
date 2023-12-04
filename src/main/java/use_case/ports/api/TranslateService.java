@@ -1,4 +1,4 @@
-package interface_adapter.api.google_translate;
+package use_case.ports.api;
 
 import java.io.IOException;
 
