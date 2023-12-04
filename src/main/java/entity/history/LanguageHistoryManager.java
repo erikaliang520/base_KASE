@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LanguageHistoryManager implements HistoryManager {
+public class LanguageHistoryManager implements HistoryManager{
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<String, String>  languageHistory = new HashMap<>();

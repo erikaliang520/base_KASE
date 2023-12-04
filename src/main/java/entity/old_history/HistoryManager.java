@@ -1,4 +1,4 @@
-package entity.old_history_vers;
+package entity.old_history;
 
 public interface HistoryManager {
 

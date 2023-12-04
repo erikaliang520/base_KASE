@@ -1,27 +1,20 @@
-package entity.old_history_vers;
-
-//import com.opencsv.CSVWriter;
-
-import entity.OriginalWord;
-import entity.TranslatedWord;
-import entity.Word;
-import entity.old_history_vers.HistoryManager;
+package entity.old_history;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class WordHistoryManager implements HistoryManager {
+public class LanguageHistoryManager implements HistoryManager {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
-    private final Map<Word, Word>  wordHistory = new HashMap<>();
+    private final Map<String, String>  languageHistory = new HashMap<>();
 
-    public WordHistoryManager(String csvpath) throws IOException {
+    public LanguageHistoryManager(String csvpath) throws IOException {
 
         csvFile = new File(csvpath);
-        headers.put("original_word", 0);
-        headers.put("translated_word", 1);
+        headers.put("original_language", 0);
+        headers.put("translated_language", 1);
 
         if (csvFile.length() == 0) {
             save(); // Creates an empty file if it doesn't already exist
@@ -33,23 +26,23 @@ public class WordHistoryManager implements HistoryManager {
                 String row;
                 while ((row = reader.readLine()) != null) {
                     String[] col = row.split(",");
-                    OriginalWord originalWord = new OriginalWord(col[0], "eng");
-                    TranslatedWord translatedWord = new TranslatedWord(col[1], "fr");
+                    String original_language = String.valueOf(col[headers.get("original_language")]);
+                    String translated_language = String.valueOf(col[headers.get("translated_language")]);
                     // Load word history
-                    wordHistory.put(originalWord, translatedWord);
+                    languageHistory.put(original_language, translated_language);
                 }
             }
         }
     }
-
-    public void save(Word original, Word translated){
-        wordHistory.put(original, translated);
+    // There is an existing string
+    public void save(String original, String translated){
+        languageHistory.put(original, translated);
         this.save();
     }
     public void save(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile))) {
-            for (Map.Entry<Word, Word> entry : wordHistory.entrySet()) {
-                String line = entry.getKey().getWord() + "," + String.join(",", entry.getValue().getWord());
+            for (Map.Entry<String, String> entry : languageHistory.entrySet()) {
+                String line = entry.getKey() + "," + String.join(",", entry.getValue());
                 writer.write(line);
                 writer.newLine();
             }
@@ -58,12 +51,12 @@ public class WordHistoryManager implements HistoryManager {
         }
     }
 
-    public Word getTranslatedWord(Word original) {
-        return wordHistory.getOrDefault(original, new TranslatedWord("", "fr"));
+    public String getTranslatedLanguage(String original) {
+        return languageHistory.getOrDefault(original, "");
     }
 
     public void clearWordHistory() {
-        wordHistory.clear();
+        languageHistory.clear();
         save();  // Save the empty state
     }
 

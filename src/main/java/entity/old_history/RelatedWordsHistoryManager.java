@@ -1,6 +1,4 @@
-package entity.old_history_vers;
-
-import entity.old_history_vers.HistoryManager;
+package entity.old_history;
 
 import java.io.*;
 import java.util.ArrayList;
