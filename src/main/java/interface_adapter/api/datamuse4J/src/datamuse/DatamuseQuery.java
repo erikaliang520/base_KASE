@@ -5,9 +5,8 @@
 * as published by Sam Hocevar. See the COPYING file for more details.
 */
 
-package interface_adapter.datamuse4J.src.datamuse;
+package interface_adapter.api.datamuse4J.src.datamuse;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
