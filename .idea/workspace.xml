@@ -5,47 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Updating past old history version files">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/cloudtranslateapitest2.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateApiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/Translater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J repo copy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/Datamuse4J.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/lib/quick-json-1.0.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/out/production/Datamuse4J/datamuse/DatamuseQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/out/production/Datamuse4J/datamuse/JSONParse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamuse4J repo copy/test/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/TranslateExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/TranslateExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/save" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateApiClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/Translater.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/RelatedWords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/WordsList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/TranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/google_translate/TranslateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TranslateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TranslateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/ExternalTranslateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/ports/api/TranslateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="controllers" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,7 +100,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20231203_0000",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "clean__arch__apiservice",
     "jdk.selected.JAVA_MODULE": "20",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

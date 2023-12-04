@@ -1,6 +1,6 @@
 package use_case.translate;
 
-import interface_adapter.api.google_translate.TranslateService;
+import use_case.ports.api.TranslateService;
 
 import java.io.IOException;
 

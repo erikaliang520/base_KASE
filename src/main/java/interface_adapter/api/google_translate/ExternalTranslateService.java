@@ -1,14 +1,14 @@
-// package api;
+package interface_adapter.api.google_translate;
 
 
-import interface_adapter.api.TranslateService;
+import use_case.ports.api.TranslateService;
 
 import java.io.IOException;
 
-public class TranslateServiceImpl implements TranslateService {
+public class ExternalTranslateService implements TranslateService {
     private final TranslateApiClient translateApiClient;
 
-    public TranslateServiceImpl(TranslateApiClient translateApiClient) {
+    public ExternalTranslateService(TranslateApiClient translateApiClient) {
         this.translateApiClient = translateApiClient;
     }
 
