@@ -2,23 +2,14 @@ package interface_adapter.test.history;
 import entity.OriginalWord;
 import entity.TranslatedWord;
 import entity.Word;
-import entity.WordHistoryManager;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.time.LocalDateTime;
+import entity.old_history_vers.WordHistoryManager;
 
-import static org.junit.Assert.*;
+import java.io.IOException;
+
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-import java.io.IOException;
 public class WordHistoryManagerTest {
     private WordHistoryManager historyManager;
     private Word originalWord1;

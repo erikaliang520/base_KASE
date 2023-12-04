@@ -1,6 +1,11 @@
-package entity;
+package entity.old_history_vers;
 
 //import com.opencsv.CSVWriter;
+
+import entity.OriginalWord;
+import entity.TranslatedWord;
+import entity.Word;
+import entity.old_history_vers.HistoryManager;
 
 import java.io.*;
 import java.util.HashMap;
