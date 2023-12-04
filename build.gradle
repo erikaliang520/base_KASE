@@ -40,9 +40,9 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.1' // Use the latest version
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4'     // Jackson databind
     implementation 'com.fasterxml.jackson.core:jackson-core:2.13.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testImplementation 'junit:junit:4.13.1'
-    testImplementation 'junit:junit:4.13.1'// Jackson core
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'// Jackson core
 }
 
 
