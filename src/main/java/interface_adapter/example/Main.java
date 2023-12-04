@@ -1,4 +1,4 @@
-package org.example;
+package interface_adapter.example;
 
 //import datamuse.*;
 
