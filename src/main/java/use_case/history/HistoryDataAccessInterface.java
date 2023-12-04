@@ -10,5 +10,4 @@ public interface HistoryDataAccessInterface {
     void save(Word word1, Word word2);
 
     ArrayList<String> get();
-
 }

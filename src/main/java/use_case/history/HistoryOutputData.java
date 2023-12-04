@@ -17,5 +17,4 @@ public class HistoryOutputData {
     public ArrayList<String> getWordHistory(){
         return this.outputWords;
     }
-
 }
