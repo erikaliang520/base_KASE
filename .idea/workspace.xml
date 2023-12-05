@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Updating past old history version files">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/ExternalTranslateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/ports/api/TranslateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" afterDir="false" />
-    </list>
+    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Added a word factory to the WordHistoryDataAccessObject to accommodate original and translated words. Modified the test file to accommodate as well." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="history_wordFactory_addition" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,37 +74,38 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2Y8fPOLfTOc0zuWh5x5jvI2eNfe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "limkaryna@gmail.com",
-    "ACTIVE_CLOUD_PROJECT_ID": "ardent-firefly-399207",
-    "ACTIVE_CLOUD_PROJECT_NAME": "My First Project",
-    "ACTIVE_CLOUD_PROJECT_NUMBER": "292215651378",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20231203_0000",
-    "git-widget-placeholder": "clean__arch__apiservice",
-    "jdk.selected.JAVA_MODULE": "20",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.16920471",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;limkaryna@gmail.com&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;ardent-firefly-399207&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;My First Project&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;292215651378&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20231203_0000&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.16920471&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/interface_adapter" />
@@ -202,19 +195,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.test" />
       <item itemvalue="Application.DatamuseQuery" />
+      <item itemvalue="Application.test" />
       <item itemvalue="Gradle.base_KASE [dependencies]" />
       <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
       <item itemvalue="JUnit.WordHistoryManagerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatamuseQuery" />
-        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
         <item itemvalue="Gradle.base_KASE [dependencies]" />
-        <item itemvalue="JUnit.WordHistoryManagerTest" />
+        <item itemvalue="Application.DatamuseQuery" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -357,5 +350,17 @@
     <MESSAGE value="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies" />
     <MESSAGE value="Updating past old history version files" />
     <option name="LAST_COMMIT_MESSAGE" value="Updating past old history version files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java</url>
+          <line>19</line>
+          <properties field="translatedWord1" class="interface_adapter.test.history.WordHistoryManagerTest" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
