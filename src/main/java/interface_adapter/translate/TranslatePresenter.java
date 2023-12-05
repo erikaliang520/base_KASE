@@ -11,7 +11,7 @@ public class TranslatePresenter implements TranslateOutputBoundary {
     private final TranslateViewModel translateViewModel;
 
 
-    public TranslatePresenter(ViewManagerModel viewManagerModel, TranslateViewModel translateViewModel, ) {
+    public TranslatePresenter(ViewManagerModel viewManagerModel, TranslateViewModel translateViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.translateViewModel = translateViewModel;
     }

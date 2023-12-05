@@ -1,7 +1,6 @@
 package use_case.translate;
 
 import entity.Word;
-import entity.WordFactory;
 import entity.factories.OriginalWordFactory;
 import entity.factories.TranslatedWordFactory;
 import use_case.ports.api.TranslateService;
