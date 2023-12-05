@@ -2,7 +2,7 @@ package data_access.history;
 
 import entity.Word;
 import use_case.history.HistoryDataAccessInterface;
-import use_case.related_words.RelatedWordDataAccessInterface;
+import use_case.related_words.related_words_generate.RelatedWordDataAccessInterface;
 
 import java.io.*;
 import java.util.ArrayList;

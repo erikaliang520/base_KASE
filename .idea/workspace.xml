@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Deleted some unnecessary entities and modified the WordHistoryDataAccessObject to use the factory WordFactory.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java" afterDir="false" />
+main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -84,33 +80,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "limkaryna@gmail.com",
-    "ACTIVE_CLOUD_PROJECT_ID": "ardent-firefly-399207",
-    "ACTIVE_CLOUD_PROJECT_NAME": "My First Project",
-    "ACTIVE_CLOUD_PROJECT_NUMBER": "292215651378",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20231203_0000",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "20",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.16920471",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;limkaryna@gmail.com&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;ardent-firefly-399207&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;My First Project&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;292215651378&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20231203_0000&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sophie&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.16920471&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/interface_adapter" />
@@ -208,11 +204,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatamuseQuery" />
-        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
         <item itemvalue="Gradle.base_KASE [dependencies]" />
-        <item itemvalue="JUnit.WordHistoryManagerTest" />
+        <item itemvalue="Application.DatamuseQuery" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -325,15 +321,8 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <task id="LOCAL-00012" summary="Deleted some unnecessary entities and modified the WordHistoryDataAccessObject to use the factory WordFactory.">
-      <option name="closed" value="true" />
-      <created>1701732297433</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1701732297433</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+
+main
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,19 +351,6 @@
     <MESSAGE value="Comiting creational files for related words interface adapters, and a few edits in changing Array&lt;String&gt; implementations to List&lt;String&gt; to ensure more flexibility within variables." />
     <MESSAGE value="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies" />
     <MESSAGE value="Updating past old history version files" />
-    <MESSAGE value="Deleted some unnecessary entities and modified the WordHistoryDataAccessObject to use the factory WordFactory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted some unnecessary entities and modified the WordHistoryDataAccessObject to use the factory WordFactory." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/test/interface_adapter/test/history/WordHistoryManagerTest.java</url>
-          <line>19</line>
-          <properties field="translatedWord1" class="interface_adapter.test.history.WordHistoryManagerTest" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+main
   </component>
 </project>
