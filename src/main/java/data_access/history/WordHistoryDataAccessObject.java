@@ -17,7 +17,8 @@ import java.util.Map;
 public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
-    private final Map<Word, Word>  wordHistory = new HashMap<>();
+    private final Map<Word, Word>  wordHistory = new LinkedHashMap<>();
+    private final ArrayList<Word> insertionOrder = new ArrayList<>();
     private WordFactory wordFactoryInput;
     private WordFactory wordFactoryOutput;
 
@@ -45,9 +46,10 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
                     String originalString = String.valueOf(col[headers.get("original_word")]);
                     String translatedString = String.valueOf(col[headers.get("translated_word")]);
                     // Load word history
-                    Word originalWord = wordFactoryInput.createWord(originalString, "eng");
-                    Word translatedWord = wordFactoryOutput.createWord(translatedString, "fr");
+                    Word originalWord = this.wordFactoryInput.createWord(originalString, "eng");
+                    Word translatedWord = this.wordFactoryOutput.createWord(translatedString, "fr");
                     wordHistory.put(originalWord, translatedWord);
+                    insertionOrder.add(originalWord);
                 }
             }
         }
@@ -55,12 +57,13 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
 
     public void save(Word original, Word translated){
         wordHistory.put(original, translated);
+        insertionOrder.add(original);
         this.save();
     }
     public void save(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile))) {
-            for (Map.Entry<Word, Word> entry : wordHistory.entrySet()) {
-                String line = entry.getKey().getWord() + "," + String.join(",", entry.getValue().getWord());
+            for (Word word : insertionOrder) {
+                String line = word.getWord() + "," + String.join(",", wordHistory.get(word).getWord());
                 writer.write(line);
                 writer.newLine();
             }
@@ -72,11 +75,11 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
     public ArrayList<String> get(){
         ArrayList<String> result = new ArrayList<>();
 
-        for (Map.Entry<Word, Word> entry : wordHistory.entrySet()){
-            result.add(entry.getKey().getWord());
-            result.add(entry.getValue().getWord());
+        for (Word word : insertionOrder){
+            result.add(0, wordHistory.get(word).getWord()); // add the oldest words to the front
+            result.add(0, word.getWord());
         }
-        return result;
+        return result; // should return an arraylist of original and translated words from newest to oldest
     }
 
     public Word getTranslatedWord(Word original) {
@@ -85,6 +88,7 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
 
     public void clearWordHistory() {
         wordHistory.clear();
+        insertionOrder.clear();
         save();  // Save the empty state
     }
 
