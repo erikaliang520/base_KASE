@@ -86,10 +86,10 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
         return wordHistory.getOrDefault(original, new TranslatedWord("", "fr"));
     }
 
-    public void clearWordHistory() {
-        wordHistory.clear();
-        insertionOrder.clear();
-        save();  // Save the empty state
-    }
+//    public void clearWordHistory() {
+//        wordHistory.clear();
+//        insertionOrder.clear();
+//        save();  // Save the empty state
+//    } //is a separate use case
 
 }
