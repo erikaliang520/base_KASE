@@ -3,6 +3,7 @@ package data_access.history;
 import use_case.history.HistoryDataAccessInterface;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -51,6 +52,11 @@ public class LanguageHistoryDataAccessObject implements HistoryDataAccessInterfa
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public ArrayList<String> get() {
+        return null;
     }
 
     public String getTranslatedLanguage(String original) {

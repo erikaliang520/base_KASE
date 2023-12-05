@@ -1,16 +1,13 @@
 package use_case.related_words.related_words_generate;
 
-import entity.related_words.RelatedWordsSelectionStrategy;
-
 public class RelatedInputData {
     final private String word;
     final private String language;
-    private final RelatedWordsSelectionStrategy strategy;
+//    private final RelatedWordsSelectionStrategy strategy;
 
-    public RelatedInputData(String word, String language, RelatedWordsSelectionStrategy developerStrategy) {
+    public RelatedInputData(String word, String language) {
         this.word = word;
         this.language = language;
-        this.strategy = developerStrategy;
     }
 
     String getWord() {
@@ -19,10 +16,6 @@ public class RelatedInputData {
 
     String getLanguage(){
         return language;
-    }
-
-    RelatedWordsSelectionStrategy getStrategy(){
-        return strategy;
     }
 
 }
