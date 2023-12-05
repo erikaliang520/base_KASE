@@ -7,12 +7,13 @@ import use_case.translate.TranslateOutputData;
 public class TranslatePresenter implements TranslateOutputBoundary {
 
 
-    private final TranslateViewModel translateViewModel;
     private ViewManagerModel viewManagerModel;
+    private final TranslateViewModel translateViewModel;
 
-    public TranslatePresenter(TranslateViewModel translateViewModel, ViewManagerModel viewManagerModel) {
-        this.translateViewModel = translateViewModel;
+
+    public TranslatePresenter(ViewManagerModel viewManagerModel, TranslateViewModel translateViewModel, ) {
         this.viewManagerModel = viewManagerModel;
+        this.translateViewModel = translateViewModel;
     }
 
     @Override

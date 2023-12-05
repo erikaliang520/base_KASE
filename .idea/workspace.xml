@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="Updating past old history version files">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateDataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TranslateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/ExternalTranslateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/ports/api/TranslateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/TranslateUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/TranslateUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/translate/TranslatePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/translate/TranslatePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/translate/TranslateInteractor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -100,7 +99,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20231203_0000",
-    "git-widget-placeholder": "clean__arch__apiservice",
+    "git-widget-placeholder": "translate__gui",
     "jdk.selected.JAVA_MODULE": "20",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
