@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="implementing CA engine for textspeech">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/api/TextSpeech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/api/TextSpeech.java" afterDir="false" />
+    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="added textspeech controller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechPresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +321,47 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="removed to create branch">
+      <option name="closed" value="true" />
+      <created>1701744688064</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701744688064</updated>
+    </task>
+    <task id="LOCAL-00013" summary="removed files in branch">
+      <option name="closed" value="true" />
+      <created>1701744836092</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701744836092</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added textspeech example to api folder">
+      <option name="closed" value="true" />
+      <created>1701744877095</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701744877095</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added textspeech use case factory">
+      <option name="closed" value="true" />
+      <created>1701744928930</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701744928930</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added textspeech controller">
+      <option name="closed" value="true" />
+      <created>1701744976660</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701744976660</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +391,10 @@
     <MESSAGE value="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies" />
     <MESSAGE value="Updating past old history version files" />
     <MESSAGE value="implementing CA engine for textspeech" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing CA engine for textspeech" />
+    <MESSAGE value="removed files in branch" />
+    <MESSAGE value="added textspeech example to api folder" />
+    <MESSAGE value="added textspeech use case factory" />
+    <MESSAGE value="added textspeech controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added textspeech controller" />
   </component>
 </project>
