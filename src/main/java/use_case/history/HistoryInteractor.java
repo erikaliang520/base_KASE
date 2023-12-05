@@ -14,7 +14,7 @@ public class HistoryInteractor implements HistoryInputBoundary{
 
     @Override
     public void execute(){
-        HistoryOutputData historyOutputData = new HistoryOutputData(historyDataAccessObject.get()); // TODO, was the get necessar???
+        HistoryOutputData historyOutputData = new HistoryOutputData(historyDataAccessObject.get());
 
         if (historyOutputData.getWordHistory().isEmpty()){
             historyPresenter.prepareFailView("Translation history is currently empty or unavailable.");
