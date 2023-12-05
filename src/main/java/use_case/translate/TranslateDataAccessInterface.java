@@ -1,5 +1,4 @@
 package use_case.translate;
-
 import entity.Word;
 
 public interface TranslateDataAccessInterface {
