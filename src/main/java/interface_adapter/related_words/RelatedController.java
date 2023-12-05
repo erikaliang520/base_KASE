@@ -1,8 +1,8 @@
 package interface_adapter.related_words;
 
 import entity.related_words.RelatedWordsSelectionStrategy;
-import use_case.related_words.RelatedInputBoundary;
-import use_case.related_words.RelatedInputData;
+import use_case.related_words.related_words_generate.RelatedInputBoundary;
+import use_case.related_words.related_words_generate.RelatedInputData;
 
 public class RelatedController {
 
