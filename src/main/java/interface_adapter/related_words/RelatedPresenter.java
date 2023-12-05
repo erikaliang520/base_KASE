@@ -2,8 +2,8 @@ package interface_adapter.related_words;
 
 import interface_adapter.ViewManagerModel;
 import interface_adapter.history.HistoryViewModel;
-import use_case.related_words.RelatedOutputBoundary;
-import use_case.related_words.RelatedOutputData;
+import use_case.related_words.related_words_generate.RelatedOutputBoundary;
+import use_case.related_words.related_words_generate.RelatedOutputData;
 
 
 public class RelatedPresenter implements RelatedOutputBoundary {
