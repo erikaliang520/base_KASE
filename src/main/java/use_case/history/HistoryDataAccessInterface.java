@@ -8,5 +8,5 @@ public interface HistoryDataAccessInterface {
     public void save();
 
 
-    ArrayList<String> get();
+    public ArrayList<String> get();
 }

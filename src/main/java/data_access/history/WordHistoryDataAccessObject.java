@@ -9,6 +9,7 @@ import entity.factories.WordFactory;
 import use_case.history.HistoryDataAccessInterface;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -66,6 +67,16 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ArrayList<String> get(){
+        ArrayList<String> result = new ArrayList<>();
+
+        for (Map.Entry<Word, Word> entry : wordHistory.entrySet()){
+            result.add(entry.getKey().getWord());
+            result.add(entry.getValue().getWord());
+        }
+        return result;
     }
 
     public Word getTranslatedWord(Word original) {
