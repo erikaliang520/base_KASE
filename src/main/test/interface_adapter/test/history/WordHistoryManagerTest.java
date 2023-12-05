@@ -6,6 +6,9 @@ import data_access.history.WordHistoryDataAccessObject;
 
 import java.io.IOException;
 
+import entity.factories.OriginalWordFactory;
+import entity.factories.TranslatedWordFactory;
+import entity.factories.WordFactory;
 import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,8 +25,13 @@ public class WordHistoryManagerTest {
         // Adjust the file path based on your project structure
         String csvFilePath = "path/to/word_small.csv";
 
+        OriginalWordFactory originalWordFactory = new OriginalWordFactory();
+        TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
+
         try {
-            historyManager = new WordHistoryDataAccessObject(csvFilePath);
+            historyManager = new WordHistoryDataAccessObject(csvFilePath,
+                    originalWordFactory,
+                    translatedWordFactory);
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception appropriately
         }

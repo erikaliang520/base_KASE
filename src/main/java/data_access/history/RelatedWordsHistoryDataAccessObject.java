@@ -61,6 +61,11 @@ public class RelatedWordsHistoryDataAccessObject implements HistoryDataAccessInt
 
     }
 
+    @Override
+    public ArrayList<String> get() {
+        return null;
+    }
+
     public ArrayList<String> getRelatedWords(String original){
         return relatedWordsHistory.getOrDefault(original, new ArrayList<>());
     }

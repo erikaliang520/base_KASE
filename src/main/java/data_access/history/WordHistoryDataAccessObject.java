@@ -9,6 +9,7 @@ import entity.factories.WordFactory;
 import use_case.history.HistoryDataAccessInterface;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -17,10 +18,15 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<Word, Word>  wordHistory = new HashMap<>();
+    private WordFactory wordFactoryInput;
+    private WordFactory wordFactoryOutput;
 
-    private WordFactory wordFactory;
+    public WordHistoryDataAccessObject(String csvpath,
+                                       WordFactory wordFactoryInput,
+                                       WordFactory wordFactoryOutput) throws IOException {
 
-    public WordHistoryDataAccessObject(String csvpath) throws IOException {
+        this.wordFactoryInput = wordFactoryInput;
+        this.wordFactoryOutput = wordFactoryOutput;
 
         csvFile = new File(csvpath);
         headers.put("original_word", 0);
@@ -39,8 +45,8 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
                     String originalString = String.valueOf(col[headers.get("original_word")]);
                     String translatedString = String.valueOf(col[headers.get("translated_word")]);
                     // Load word history
-                    Word originalWord = wordFactory.createWord(originalString, "eng");
-                    Word translatedWord = wordFactory.createWord(translatedString, "fr");
+                    Word originalWord = wordFactoryInput.createWord(originalString, "eng");
+                    Word translatedWord = wordFactoryOutput.createWord(translatedString, "fr");
                     wordHistory.put(originalWord, translatedWord);
                 }
             }
@@ -61,6 +67,16 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ArrayList<String> get(){
+        ArrayList<String> result = new ArrayList<>();
+
+        for (Map.Entry<Word, Word> entry : wordHistory.entrySet()){
+            result.add(entry.getKey().getWord());
+            result.add(entry.getValue().getWord());
+        }
+        return result;
     }
 
     public Word getTranslatedWord(Word original) {
