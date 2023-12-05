@@ -6,7 +6,6 @@ import use_case.textspeech.TextSpeechInputData;
 public class TextSpeechController {
     private TextSpeechInputBoundary interactor;
 
-
     public TextSpeechController(TextSpeechInputBoundary interactor) {
         this.interactor = interactor;
     }
