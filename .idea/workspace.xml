@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="added textspeech controller">
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechPresenter.java" afterDir="false" />
+    <list default="true" id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="fixed history use case for HistoryInteractor so that get() exists in HistoryDataAccessObject. Wrote get() such that it returns an arraylist of the format  [originalword1.word, translatedword1.word, originalword2.word, translatedword2.word, etc.] using the hashmap wordHistory.">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
     </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="99a6bf9a-25cb-4b92-8f99-618482432533" />
+        <option name="accountId" value="ae7d04a4-df6a-4211-9981-e5ae677a0062" />
         <option name="url" value="https://github.com/erikaliang520/base_KASE.git" />
       </UrlAndAccount>
     </option>
@@ -76,37 +77,38 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2Y8fPOLfTOc0zuWh5x5jvI2eNfe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;limkaryna@gmail.com&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;ardent-firefly-399207&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;My First Project&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;292215651378&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20231203_0000&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sophie&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.16920471&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "limkaryna@gmail.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "ardent-firefly-399207",
+    "ACTIVE_CLOUD_PROJECT_NAME": "My First Project",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "292215651378",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.google.cloudcode.ide_session_index": "20231203_0000",
+    "git-widget-placeholder": "history__interactor__get()",
+    "jdk.selected.JAVA_MODULE": "20",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.16920471",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/interface_adapter" />
@@ -361,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701744976660</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed history use case for HistoryInteractor so that get() exists in HistoryDataAccessObject. Wrote get() such that it returns an arraylist of the format  [originalword1.word, translatedword1.word, originalword2.word, translatedword2.word, etc.] using the hashmap wordHistory.">
+      <option name="closed" value="true" />
+      <created>1701806620770</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701806620771</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +405,7 @@
     <MESSAGE value="added textspeech example to api folder" />
     <MESSAGE value="added textspeech use case factory" />
     <MESSAGE value="added textspeech controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="added textspeech controller" />
+    <MESSAGE value="fixed history use case for HistoryInteractor so that get() exists in HistoryDataAccessObject. Wrote get() such that it returns an arraylist of the format  [originalword1.word, translatedword1.word, originalword2.word, translatedword2.word, etc.] using the hashmap wordHistory." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed history use case for HistoryInteractor so that get() exists in HistoryDataAccessObject. Wrote get() such that it returns an arraylist of the format  [originalword1.word, translatedword1.word, originalword2.word, translatedword2.word, etc.] using the hashmap wordHistory." />
   </component>
 </project>
