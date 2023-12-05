@@ -1,22 +1,16 @@
 package use_case.related_words.related_words_generate;
 
-import entity.related_words.RelatedWordsSelectionStrategy;
-
 import java.util.List;
 
 public class RelatedOutputData {
     final private String word;
     final private String language;
-    private RelatedWordsSelectionStrategy strategy;
     private List<String> generatedWords;
 
-    public RelatedOutputData(String word, String language, RelatedWordsSelectionStrategy developerStrategy) {
+    public RelatedOutputData(String word, String language, List<String> generatedWords) {
         this.word = word;
         this.language = language;
-        this.strategy = developerStrategy;
-
-        // inject my string into whatever strategy pattern was chosen:
-        this.generatedWords =  strategy.selectTopWordsStrategy(this.word);
+        this.generatedWords = generatedWords;
     }
 
     public List<String> getRelatedWords(){
@@ -31,9 +25,5 @@ public class RelatedOutputData {
         return language;
     }
 
-    void setGeneratedWordsNewStrategy(RelatedWordsSelectionStrategy newStrategy){
-        this.generatedWords = newStrategy.selectTopWordsStrategy(this.word);
-        this.strategy = newStrategy;
-    }
 
 }
