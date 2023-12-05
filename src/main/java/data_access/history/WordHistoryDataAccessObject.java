@@ -7,6 +7,7 @@ import entity.TranslatedWord;
 import entity.Word;
 import entity.factories.WordFactory;
 import use_case.history.HistoryDataAccessInterface;
+import use_case.translate.TranslateDataAccessInterface;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class WordHistoryDataAccessObject implements HistoryDataAccessInterface {
+public class WordHistoryDataAccessObject implements HistoryDataAccessInterface, TranslateDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<Word, Word>  wordHistory = new HashMap<>();

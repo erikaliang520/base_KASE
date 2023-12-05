@@ -1,16 +1,18 @@
 package use_case.translate;
 
+import entity.Word;
+
 public class TranslateOutputData {
 
-    private final String original;
+    private final Word original;
 
-    private final String translated;
-    public TranslateOutputData(String original, String translated) {
+    private final Word translated;
+    public TranslateOutputData(Word original, Word translated) {
         this.original = original;
         this.translated = translated;
     }
 
-    public String getTranslated() {
+    public Word getTranslated() {
         return translated;
     }
 }

@@ -19,7 +19,7 @@ public class TranslatePresenter implements TranslateOutputBoundary {
     @Override
     public void prepareSuccessView(TranslateOutputData translation) {
         TranslateState translateState = translateViewModel.getState();
-        translateState.setTranslatedText(translation.getTranslated());
+        translateState.setTranslatedText(translation.getTranslated().getWord());
         this.translateViewModel.setState(translateState);
         this.translateViewModel.firePropertyChanged();
 

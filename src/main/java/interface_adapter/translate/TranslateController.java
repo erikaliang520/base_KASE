@@ -12,8 +12,8 @@ public class TranslateController {
         this.translateUseCaseInteractor = translateUseCaseInteractor;
     }
 
-    public void execute(String word) throws IOException {
-        TranslateInputData translateInputData = new TranslateInputData(word);
+    public void execute(String word, boolean saveToHistory) throws IOException {
+        TranslateInputData translateInputData = new TranslateInputData(word, saveToHistory);
         translateUseCaseInteractor.execute(translateInputData);
     }
 }

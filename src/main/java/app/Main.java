@@ -1,7 +1,9 @@
 package app;
 
 import data_access.FileWordDataAccessObject;
+import data_access.history.WordHistoryDataAccessObject;
 import entity.factories.OriginalWordFactory;
+import entity.factories.TranslatedWordFactory;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.translate.TranslateViewModel;
 import view.TranslateView;
@@ -35,16 +37,20 @@ public class Main {
         // results from the use case. The ViewModels are observable, and will
         // be observed by the Views.
         TranslateViewModel translateViewModel = new TranslateViewModel();
-        FileWordDataAccessObject wordDataAccessObject;
+        WordHistoryDataAccessObject wordHistoryDataAccessObject;
 
+
+        // TODO add pathname for csv file, using test as placeholder
         try {
-            wordDataAccessObject = new FileWordDataAccessObject("...", );
+            wordHistoryDataAccessObject = new WordHistoryDataAccessObject("test",
+                    new OriginalWordFactory(),
+                    new TranslatedWordFactory());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         TranslateView translateView = TranslateUseCaseFactory.create(viewManagerModel,
-                translateViewModel, wordDataAccessObject);
+                translateViewModel, wordHistoryDataAccessObject);
         views.add(translateView, translateView.viewName);
 
         viewManagerModel.setActiveView(translateView.viewName);
