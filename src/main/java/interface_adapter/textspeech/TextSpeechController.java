@@ -4,16 +4,16 @@ import use_case.textspeech.TextSpeechInputData;
 
 
 public class TextSpeechController {
-    private TextSpeechInputBoundary interactor;
+    private TextSpeechInputBoundary textSpeechinteractor;
 
-    public TextSpeechController(TextSpeechInputBoundary interactor) {
-        this.interactor = interactor;
+    public TextSpeechController(TextSpeechInputBoundary textSpeechinteractor) {
+        this.textSpeechinteractor = textSpeechinteractor;
     }
 
 
     public void convertTextToSpeech(String text) {
         TextSpeechInputData inputData = new TextSpeechInputData();
-        interactor.execute(inputData);
+        textSpeechinteractor.execute(inputData);
     }
 }
 
