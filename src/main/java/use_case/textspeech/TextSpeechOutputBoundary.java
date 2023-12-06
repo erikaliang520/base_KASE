@@ -2,6 +2,8 @@ package use_case.textspeech;
 
 
 public interface TextSpeechOutputBoundary {
-    void present(TextSpeechOutputData outputData);
+    void prepareTextSpeechSuccessView(TextSpeechOutputData outputData);
+
+    void prepareTextSpeechFailView(String error);
 
 }

@@ -1,13 +1,33 @@
 package interface_adapter.textspeech;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 
 public class TextSpeechViewModel {
-    private String audioContent;
-    public String getAudioContent() {
-        return audioContent;
+
+    private TextSpeechState state = new TextSpeechState();
+
+    public TextSpeechViewModel() {
+        super();
     }
-    public void setAudioContent(String audioContent) {
-        this.audioContent = audioContent;
+
+    private final PropertyChangeSupport support = new PropertyChangeSupport(this);
+
+    public void firePropertyChanged() {
+        support.firePropertyChange("state", null, this.state);
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        support.addPropertyChangeListener(listener);
+    }
+
+    public TextSpeechState getState() {
+        return state;
+    }
+
+    public void setState(TextSpeechState state) {
+        this.state = state;
     }
 }
+
 
