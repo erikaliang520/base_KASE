@@ -13,10 +13,10 @@ public class RelatedController {
     }
 
     public void execute( String word,
-                         String language,
-                         RelatedWordsSelectionStrategy developerStrategy){
+                         String language
+                         ){
 
-        RelatedInputData relatedInputData = new RelatedInputData(word, language, developerStrategy);
+        RelatedInputData relatedInputData = new RelatedInputData(word, language);
 
         wordRelatedUseCaseInteractor.execute(relatedInputData);
 

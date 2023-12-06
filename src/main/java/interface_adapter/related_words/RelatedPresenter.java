@@ -8,32 +8,34 @@ import use_case.related_words.related_words_generate.RelatedOutputData;
 
 public class RelatedPresenter implements RelatedOutputBoundary {
 
-    private final RelatedViewModel relatedViewModel; // TODO technically this is same view model as translate though
+    // should be very similar to translate view model, since it's same panel
+    private final RelatedViewModel relatedViewModel;
 
-    private final HistoryViewModel historyViewModel;
-
+    // we actually don't care about history model since it's a pop up and not switch between
+    //private final HistoryViewModel historyViewModel;
     private ViewManagerModel viewManagerModel;
 
-    public RelatedPresenter(RelatedViewModel relatedViewModel, HistoryViewModel historyViewModel, ViewManagerModel viewManagerModel) {
+    public RelatedPresenter(RelatedViewModel relatedViewModel, ViewManagerModel viewManagerModel) {
         this.relatedViewModel = relatedViewModel;
-        this.historyViewModel = historyViewModel;
         this.viewManagerModel = viewManagerModel;
     }
 
     @Override
     public void prepareSuccessView(RelatedOutputData generatedWords) {
 
-        LoginState loginState = loginViewModel.getState();
-        loginState.setUsername(response.getUsername());
-        this.loginViewModel.setState(loginState);
-        loginViewModel.firePropertyChanged();
+        RelatedState relatedState = relatedViewModel.getState();
+        relatedState.setRelatedWordsGenerated(generatedWords.getRelatedWords());
+        this.relatedViewModel.setState(relatedState);
+        relatedViewModel.firePropertyChanged();
 
-        viewManagerModel.setActiveView(loginViewModel.getViewName());
+        viewManagerModel.setActiveView(relatedViewModel.getViewName());
         viewManagerModel.firePropertyChanged();
     }
 
     @Override
     public void prepareFailView(String error) {
-
+        RelatedState relatedState = relatedViewModel.getState();
+        relatedState.setRelatedWordsError(error);
+        relatedViewModel.firePropertyChanged();
     }
 }
