@@ -1,14 +1,16 @@
 package interface_adapter.textspeech;
 
+import interface_adapter.ViewModel;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
-public class TextSpeechViewModel {
+public class TextSpeechViewModel extends ViewModel {
 
     private TextSpeechState state = new TextSpeechState();
 
     public TextSpeechViewModel() {
-        super();
+        super("textspeech");
     }
 
     private final PropertyChangeSupport support = new PropertyChangeSupport(this);
