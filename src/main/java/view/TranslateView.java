@@ -43,7 +43,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
         // only need a display panel for translation...
         JPanel displayInfo = new JPanel();
-        JLabel displayLabel = new JLabel("Display Text: ");
+        JLabel displayLabel = new JLabel("Translation: ");
         displayInfo.add(displayLabel);
 
 
@@ -61,8 +61,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             public void insertUpdate(DocumentEvent e) {
                 try {
                     handleTextChange(currentState.getOriginalText());
-//                    translateController.execute(currentState.getOriginalText());
-//                    displayLabel.setText(translateViewModel.getState().getTranslatedText());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -103,8 +101,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             public void removeUpdate(DocumentEvent e) {
                 try {
                     handleTextChange(currentState.getOriginalText());
-//                    translateController.execute(currentState.getOriginalText());
-//                    displayLabel.setText(translateViewModel.getState().getTranslatedText());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -115,8 +111,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             public void changedUpdate(DocumentEvent e) {
                 try {
                     handleTextChange(currentState.getOriginalText());
-//                    translateController.execute(currentState.getOriginalText());
-//                    displayLabel.setText(translateViewModel.getState().getTranslatedText());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -131,6 +125,10 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         wordInputField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+                updateState(e);
+            }
+
+            private void updateState(KeyEvent e) {
                 TranslateState currentState = translateViewModel.getState();
                 currentState.setOriginalText(wordInputField.getText() + e.getKeyChar());
                 translateViewModel.setState(currentState);
@@ -138,7 +136,20 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
             @Override
             public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    handleBackspace();
+                } else {
+                    updateState(e);
+                }
+            }
 
+            private void handleBackspace() {
+                TranslateState currentState = translateViewModel.getState();
+                String currentText = wordInputField.getText();
+                if (!currentText.isEmpty()) {
+                    currentState.setOriginalText(currentText.substring(0, currentText.length() - 1));
+                    translateViewModel.setState(currentState);
+                }
             }
 
             @Override
