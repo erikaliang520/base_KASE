@@ -54,7 +54,9 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         // adding document listeners for the wordInputField for real time updates
         wordInputField.getDocument().addDocumentListener(new DocumentListener() {
             TranslateState currentState = translateViewModel.getState();
-            boolean saveToHistory = false;
+            private boolean saveToHistory = false;
+
+            private Timer timer;
             @Override
             public void insertUpdate(DocumentEvent e) {
                 try {
@@ -67,16 +69,24 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             }
 
             private void handleTextChange(String changedText) throws IOException {
+
+                // Cancel existing timer, if any
+                if (timer != null) {
+                    timer.stop();
+                }
+
+                String filteredText = changedText.replaceAll("[^a-zA-Z]", "");
+
                 saveToHistory = false; // Reset the flag on each text change
-                translateController.execute(changedText, saveToHistory);
+                translateController.execute(filteredText, saveToHistory);
                 // Schedule a delayed check for inactivity after 5 seconds
-                Timer timer = new Timer(5000, new ActionListener() {
+                timer = new Timer(5000, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         if (!saveToHistory) {
                             // No activity in the last 5 seconds, set the flag to true
                             try {
-                                translateController.execute(currentState.getOriginalText(), true);
+                                translateController.execute(filteredText, true);
                             } catch (IOException ex) {
                                 throw new RuntimeException(ex);
                             }
@@ -86,7 +96,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
                 timer.setRepeats(false);
                 timer.start();
 
-                displayLabel.setText(translateViewModel.getState().getTranslatedText());
+                displayLabel.setText("Translation: " + translateViewModel.getState().getTranslatedText());
             }
 
             @Override
