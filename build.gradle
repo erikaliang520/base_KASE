@@ -49,6 +49,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'// Jackson core
 }
 
+dependencies {
+    implementation platform("com.google.cloud:libraries-bom:25.1.0")
+    implementation("com.google.cloud:google-cloud-translate")
+}
 
 test {
     useJUnitPlatform()

@@ -9,8 +9,8 @@ public class TextSpeechView {
     public TextSpeechView(TextSpeechViewModel viewModel) {
         this.viewModel = viewModel;
     }
-    public void displayAudioContent() {
-        System.out.println(viewModel.getAudioContent());
-    }
+//    public void displayAudioContent() {
+//        System.out.println(viewModel.getAudioContent());
+//    }
 }
 
