@@ -10,7 +10,7 @@ public class RelatedInputData {
         this.language = language;
     }
 
-    String getWord() {
+    public String getWord() {
         return word;
     }
 
