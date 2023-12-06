@@ -33,14 +33,14 @@ public class TranslateInteractor implements TranslateInputBoundary {
     public void execute(TranslateInputData translateInputData) throws IOException {
         String original = translateInputData.getWord();
         String translated = translateService.performTranslate(original);
-
-        TranslateOutputData translateOutputData = new TranslateOutputData(original, translated);
-
-        // TODO change type signature of TranslateOutputData to be Words instead of Strings
-
         Word originalWord = originalWordFactory.createWord(original, "English");
         Word translatedWord = translatedWordFactory.createWord(translated, "French");
-        wordDataAccessObject.save(originalWord, translatedWord);
+
+        TranslateOutputData translateOutputData = new TranslateOutputData(originalWord, translatedWord);
+
+        if (translateInputData.isSaveToHistory()) {
+            wordDataAccessObject.save(originalWord, translatedWord);
+        }
 
         translatePresenter.prepareSuccessView(translateOutputData);
 
