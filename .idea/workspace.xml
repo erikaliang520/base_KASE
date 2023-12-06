@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-main
+    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="Implemented new strategy for translation since this is most flexible option given translation constraints">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/quick_json_1_0_2_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/.idea/libraries/quick_json_1_0_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/datamuse4J.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/datamuse/DatamuseQuery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/datamuse/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/datamuse/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/datamuse/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/javadoc/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J/lib/quick-json-1.0.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/entity/OriginalWordRelatedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base_KASE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_KASE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/TextSpeech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/api/TextSpeech.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/api/Translater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/api/Translater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/related_words/RelatedInteractor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,34 +115,39 @@ main
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;limkaryna@gmail.com&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;ardent-firefly-399207&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;My First Project&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;292215651378&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20231203_0000&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sophie&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.16920471&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "limkaryna@gmail.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "ardent-firefly-399207",
+    "ACTIVE_CLOUD_PROJECT_NAME": "My First Project",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "292215651378",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.google.cloudcode.ide_session_index": "20231205_0001",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "20",
+    "last_opened_file_path": "/Users/karynal/CSC207/base_KASE/src/main/java/interface_adapter/api/datamuse4J",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.16920471",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/interface_adapter" />
       <recent name="$PROJECT_DIR$/src/main/java/entity" />
@@ -116,26 +156,13 @@ main
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DatamuseQuery">
+  <component name="RunManager" selected="JUnit.OriginalWordRelatedTest">
     <configuration name="DatamuseQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="interface_adapter.datamuse4J.src.datamuse.DatamuseQuery" />
       <module name="base_KASE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="interface_adapter.datamuse4J.src.datamuse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="interface_adapter.datamuse4J.test.test" />
-      <module name="base_KASE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interface_adapter.datamuse4J.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,6 +191,21 @@ main
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
       <method v="2" />
+    </configuration>
+    <configuration name="OriginalWordRelatedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="entity" />
+      <option name="MAIN_CLASS_NAME" value="entity.OriginalWordRelatedTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="WordHistoryManagerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="base_KASE" />
@@ -196,26 +238,26 @@ main
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.test" />
       <item itemvalue="Application.DatamuseQuery" />
       <item itemvalue="Gradle.base_KASE [dependencies]" />
+      <item itemvalue="JUnit.OriginalWordRelatedTest" />
       <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
       <item itemvalue="JUnit.WordHistoryManagerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OriginalWordRelatedTest" />
         <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.WordHistoryManagerTest (1)" />
         <item itemvalue="Gradle.base_KASE [dependencies]" />
         <item itemvalue="Application.DatamuseQuery" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e4ac2405-75be-4452-83a1-aa20e1f096f5" name="Changes" comment="" />
+      <changelist id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="Implemented new strategy for translation since this is most flexible option given translation constraints" />
       <created>1699912103609</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,6 +274,7 @@ main
       <workItem from="1701565728499" duration="3746000" />
       <workItem from="1701574046981" duration="26133000" />
       <workItem from="1701653182836" duration="3534000" />
+      <workItem from="1701827920548" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="Modified description of problem domain and description fo application.">
       <option name="closed" value="true" />
@@ -321,8 +364,6 @@ main
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-
-main
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +392,7 @@ main
     <MESSAGE value="Comiting creational files for related words interface adapters, and a few edits in changing Array&lt;String&gt; implementations to List&lt;String&gt; to ensure more flexibility within variables." />
     <MESSAGE value="Updating build gradle for everyone so my dependencies are saved for jackson gradle dependencies" />
     <MESSAGE value="Updating past old history version files" />
-main
+    <MESSAGE value="Implemented new strategy for translation since this is most flexible option given translation constraints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented new strategy for translation since this is most flexible option given translation constraints" />
   </component>
 </project>

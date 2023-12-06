@@ -6,9 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main/test" isTestSource="true" />
     </content>
+
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="quick-json-1.0.2.34" level="project" />
+    <orderEntry type="library" name="quick-json-1.0.2.3" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.15.3" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.15.3" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.15.3" level="project" />
