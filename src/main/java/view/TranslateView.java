@@ -55,7 +55,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         wordInputField.getDocument().addDocumentListener(new DocumentListener() {
             TranslateState currentState = translateViewModel.getState();
             private boolean saveToHistory = false;
-
             private Timer timer;
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -160,9 +159,14 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
+        JPanel infoPanel = new JPanel(new FlowLayout());
+
+        // Add components to the infoPanel (on the same line)
+        infoPanel.add(wordInfo);
+        infoPanel.add(displayInfo);
+
         this.add(title);
-        this.add(wordInfo);
-        this.add(displayInfo);
+        this.add(infoPanel);
         this.add(buttons);
     }
 
