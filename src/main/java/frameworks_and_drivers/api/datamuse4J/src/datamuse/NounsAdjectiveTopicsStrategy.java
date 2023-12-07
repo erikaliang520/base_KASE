@@ -1,17 +1,35 @@
-package interface_adapter.api.datamuse4J.src.datamuse;
+package frameworks_and_drivers.api.datamuse4J.src.datamuse;
 
 import entity.related_words.RelatedWordsSelectionStrategy;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
+
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
-public class SynonymStrategy implements RelatedWordsSelectionStrategy {
+public class NounsAdjectiveTopicsStrategy implements RelatedWordsSelectionStrategy {
+    private int topN;
+    private String topic;
 
-    private final int topN;
+    public NounsAdjectiveTopicsStrategy(int developerTopNum, String developerTopic) {
+        this.topN = developerTopNum;
+        this.topic = developerTopic;
+    }
 
-    public SynonymStrategy(int topN) {
-        this.topN = topN;
+    public static List<String> filterTopWordsWithMinimum(List<WordScore> wordScores, int topN, int minScore) {
+        List<WordScore> filteredWords = wordScores.stream()
+                .filter(wordScore -> wordScore.getIntScore() >= minScore)
+                .sorted(Comparator.comparingInt(WordScore::getIntScore).reversed())
+                .limit(topN)
+                .collect(Collectors.toList());
+
+        List<String> result = new ArrayList<>();
+        for (WordScore wordScore : filteredWords) {
+            result.add(wordScore.getWord());
+        }
+        return result;
     }
 
     private static List<String> getTopNStringAttributes(List<WordScore> wordScores, int topN) {
@@ -23,16 +41,16 @@ public class SynonymStrategy implements RelatedWordsSelectionStrategy {
 
     @Override
     public List<String> selectTopWordsStrategy(String word) {
+
         DatamuseQuery dQuery = new DatamuseQuery();
 
         // find the related words based on word and given strategy
-        String jsonString = dQuery.findSynonyms(word);
+        String jsonString = dQuery.findNounsByTopicRelativity(word, this.topic);
 
         // returns a parsed string, call method to return a list of strings of topN elements
         List<WordScore> wordScores = DatamuseQuery.getWordScores(jsonString);
 
         // if list of WordScore is empty, can't return top elements, so just return empty string list
-        assert wordScores != null;
         if (wordScores.isEmpty()){
             return Collections.emptyList();
         }
@@ -51,5 +69,8 @@ public class SynonymStrategy implements RelatedWordsSelectionStrategy {
 
         // catch all case
         return Collections.emptyList();
+
     }
 }
+
+

@@ -1,4 +1,4 @@
-package interface_adapter.api.textspeech;
+package frameworks_and_drivers.api.textspeech;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.texttospeech.v1.*;

@@ -1,6 +1,6 @@
-package interface_adapter.api.textspeech;
+package frameworks_and_drivers.api.textspeech;
 
-import use_case.ports.api.TextSpeechService;
+import entity.services.TextSpeechService;
 
 import java.io.IOException;
 
