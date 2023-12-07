@@ -10,31 +10,32 @@ import entity.factories.OriginalWordFactory;
 import entity.factories.TranslatedWordFactory;
 import entity.factories.WordFactory;
 import org.junit.jupiter.api.BeforeEach;
+import use_case.history.HistoryDataAccessInterface;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WordHistoryManagerTest {
-    private WordHistoryDataAccessObject historyManager;
-    private Word originalWord1;
-    private Word originalWord2;
-    private Word translatedWord1;
-    private Word translatedWord2;
+    private Word originalWord1 = new OriginalWord("apple", "eng");
+    private Word originalWord2 = new OriginalWord("cat", "eng");
+    private Word translatedWord1 = new TranslatedWord("pomme", "fr");
+    private Word translatedWord2 = new TranslatedWord("chat", "fr");
 
     @BeforeEach
     void setUp() {
         // Adjust the file path based on your project structure
-        String csvFilePath = "path/to/word_small.csv";
+        String csvFilePath = "main/word_small.csv";
 
         OriginalWordFactory originalWordFactory = new OriginalWordFactory();
         TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
 
-        try {
-            historyManager = new WordHistoryDataAccessObject(csvFilePath,
-                    originalWordFactory,
-                    translatedWordFactory);
-        } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception appropriately
-        }
+//        try {
+//            this.historyManager = new WordHistoryDataAccessObject(csvFilePath,
+//                    originalWordFactory,
+//                    translatedWordFactory);
+//        } catch (IOException e) {
+//            e.printStackTrace(); // Handle the exception appropriately
+//            System.out.println("failed");
+//        }
 
         // Initialize some words for testing
         originalWord1 = new OriginalWord("apple", "eng");
@@ -44,7 +45,14 @@ public class WordHistoryManagerTest {
     }
 
     @org.junit.Test
-    public void saveAndRetrieveWord() {
+    public void saveAndRetrieveWord() throws IOException {
+        String csvFilePath = "/Users/erikaliang/IdeaProjects/base_KASE/src/main/word_file_small.csv" ;
+        OriginalWordFactory originalWordFactory = new OriginalWordFactory();
+        TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
+        WordHistoryDataAccessObject historyManager = new WordHistoryDataAccessObject(csvFilePath,
+                originalWordFactory,
+                translatedWordFactory);
+
         historyManager.save(originalWord1, translatedWord1);
         Word retrievedTranslation = historyManager.getTranslatedWord(originalWord1);
         assertEquals(translatedWord1.getWord(), retrievedTranslation.getWord());
@@ -52,12 +60,49 @@ public class WordHistoryManagerTest {
     }
 
     @org.junit.Test
-    public void saveAndClearHistory() {
+    public void saveAndClearHistory() throws IOException{
+        String csvFilePath = "/Users/erikaliang/IdeaProjects/base_KASE/src/main/word_file_small.csv" ;
+        OriginalWordFactory originalWordFactory = new OriginalWordFactory();
+        TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
+        WordHistoryDataAccessObject historyManager = new WordHistoryDataAccessObject(csvFilePath,
+                originalWordFactory,
+                translatedWordFactory);
+
         historyManager.save(originalWord2, translatedWord2);
         historyManager.clearWordHistory();
         Word retrievedTranslation = historyManager.getTranslatedWord(originalWord2);
         assertEquals("", retrievedTranslation.getWord()); // Empty string as default for not found
     }
 
-    // Add more test cases as needed to cover different scenarios
+    @org.junit.Test
+    public void saveMultipleWords() throws IOException{
+        String csvFilePath = "/Users/erikaliang/IdeaProjects/base_KASE/src/main/word_file_small.csv" ;
+        OriginalWordFactory originalWordFactory = new OriginalWordFactory();
+        TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
+        WordHistoryDataAccessObject historyManager = new WordHistoryDataAccessObject(csvFilePath,
+                originalWordFactory,
+                translatedWordFactory);
+
+        historyManager.save(originalWord1, translatedWord1);
+        historyManager.save(originalWord2, translatedWord2);
+        Word retrievedTranslation1 = historyManager.getTranslatedWord(originalWord1);
+        Word retrievedTranslation2 = historyManager.getTranslatedWord(originalWord2);
+        assertEquals(translatedWord1.getWord(), retrievedTranslation1.getWord());
+        assertEquals(translatedWord2.getWord(), retrievedTranslation2.getWord());
+    }
+
+    @org.junit.Test
+    public void retrieveNonExistentWord() throws IOException{
+        String csvFilePath = "/Users/erikaliang/IdeaProjects/base_KASE/src/main/word_file_small.csv" ;
+        OriginalWordFactory originalWordFactory = new OriginalWordFactory();
+        TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
+        WordHistoryDataAccessObject historyManager = new WordHistoryDataAccessObject(csvFilePath,
+                    originalWordFactory,
+                    translatedWordFactory);
+
+        Word nonExistentWord = new OriginalWord("nonexistent", "eng");
+        Word retrievedTranslation = historyManager.getTranslatedWord(nonExistentWord);
+        assertEquals("", retrievedTranslation.getWord()); // Non-existent word should return empty string
+    }
+
 }
