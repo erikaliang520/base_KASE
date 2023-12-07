@@ -1,4 +1,4 @@
-package data_access.testing_DAOs;
+package data_access.testing_DAOs.testing_DAOs;
 
 import entity.Word;
 import entity.WordRelated;

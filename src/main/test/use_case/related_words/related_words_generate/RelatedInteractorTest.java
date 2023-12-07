@@ -1,6 +1,6 @@
 package use_case.related_words.related_words_generate;
 
-import data_access.testing_DAOs.InMemoryRelatedWordsDAO;
+import data_access.testing_DAOs.testing_DAOs.InMemoryRelatedWordsDAO;
 import entity.WordRelated;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.factories.OriginalWordFactory;
