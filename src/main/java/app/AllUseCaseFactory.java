@@ -86,8 +86,7 @@ public class AllUseCaseFactory {
                     historyViewModel, historyController);
 
 
-            // TODO finish historyView file
-            HistoryView historyView = new HistoryView();
+            HistoryView historyView = new HistoryView(historyViewModel, historyController);
 
             // index: 0 - translate, 1 - history
             allViews.add(translateView);
