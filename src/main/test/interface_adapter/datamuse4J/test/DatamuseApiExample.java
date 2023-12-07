@@ -1,6 +1,6 @@
 package interface_adapter.datamuse4J.test;
 
-import interface_adapter.api.datamuse4J.src.datamuse.DatamuseQuery;
+import frameworks_and_drivers.api.datamuse4J.src.datamuse.DatamuseQuery;
 
 class DatamuseApiExample {
 
