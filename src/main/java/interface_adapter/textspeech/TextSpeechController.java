@@ -11,7 +11,7 @@ public class TextSpeechController {
     }
 
 
-    public void convertTextToSpeech(String text) {
+    public void execute(String text) {
         TextSpeechInputData inputData = new TextSpeechInputData();
         textSpeechinteractor.execute(inputData);
     }
