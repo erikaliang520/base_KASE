@@ -221,7 +221,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
                     TranslateState currentState = translateViewModel.getState();
 
                     try {
-                        textSpeechController.execute(currentState.getOriginalText());
+                        textSpeechController.execute(currentState.getTranslatedText());
                     } catch (IOException ex) {
                         throw new RuntimeException(ex);
                     }
@@ -285,70 +285,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             mediaPlayer.play();
         });
 
-//        SwingUtilities.invokeLater(() -> {
-//            try {
-//                FileInputStream fileInputStream = new FileInputStream(filePath);
-//                Bitstream bitstream = new Bitstream(fileInputStream);
-//
-//
-//                int frames = bitstream.readFrame().max_number_of_frames(fileInputStream);
-//                int durationInSeconds = frames / bitstream.readFrame().max_number_of_frames(fileInputStream);
-//
-//                JFrame frame = new JFrame("MP3 Player");
-//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//                frame.setSize(300, 100);
-//                frame.setLocationRelativeTo(null);
-//
-//                JButton playButton = new JButton("Play");
-//                JButton stopButton = new JButton("Stop");
-//
-//                playButton.addActionListener(e -> play(filePath, 2)); // duration in seconds at most is 2
-//                stopButton.addActionListener(e -> stop());
-//
-//                JPanel panel = new JPanel();
-//                panel.add(playButton);
-//                panel.add(stopButton);
-//
-//                frame.getContentPane().add(panel);
-//                frame.setVisible(true);
-//            } catch (IOException | JavaLayerException ex) {
-//                ex.printStackTrace();
-//            }
-//        });
     }
-//
-//    private static void play(String filePath, int durationInSeconds) {
-//        SwingUtilities.invokeLater(() -> {
-//            try {
-//                FileInputStream fileInputStream = new FileInputStream(filePath);
-//                AdvancedPlayer player = new AdvancedPlayer(fileInputStream);
-//
-//                player.setPlayBackListener(new PlaybackListener() {
-//                    @Override
-//                    public void playbackFinished(PlaybackEvent evt) {
-//                        // Stop playback after the specified duration
-//                        if (player.getTotalFrames() > durationInSeconds) {
-//                            stop();
-//                        }
-//                    }
-//                });
-//
-//                new Thread(() -> {
-//                    try {
-//                        player.play();
-//                    } catch (JavaLayerException e) {
-//                        e.printStackTrace();
-//                    }
-//                }).start();
-//            } catch (IOException | JavaLayerException ex) {
-//                ex.printStackTrace();
-//            }
-//        });
-//    }
-//
-//    private static void stop() {
-//        System.exit(0);
-//    }
 
     private void setFields(TranslateState state) {
         //wordInputField.setText(state.getOriginalText());

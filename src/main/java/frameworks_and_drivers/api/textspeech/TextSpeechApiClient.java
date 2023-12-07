@@ -25,8 +25,8 @@ public class TextSpeechApiClient {
                     .build();
 
             VoiceSelectionParams voice = VoiceSelectionParams.newBuilder()
-                    .setLanguageCode("en-US")
-                    .setSsmlGender(SsmlVoiceGender.NEUTRAL)
+                    .setLanguageCode("fr")
+                    .setSsmlGender(SsmlVoiceGender.FEMALE)
                     .build();
 
             AudioConfig audioConfig = AudioConfig.newBuilder()
