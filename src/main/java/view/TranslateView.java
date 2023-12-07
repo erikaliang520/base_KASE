@@ -44,6 +44,8 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
     private final HistoryController historyController;
 
+    private JPanel relatedPanel = new JPanel(new FlowLayout());
+
 
     public TranslateView(TranslateViewModel translateViewModel, TranslateController translateController,
                          RelatedViewModel relatedViewModel, RelatedController relatedController,
@@ -59,6 +61,8 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         this.historyController = historyController;
 
         translateViewModel.addPropertyChangeListener(this);
+        relatedViewModel.addPropertyChangeListener(this);
+        historyViewModel.addPropertyChangeListener(this);
 
         JLabel title = new JLabel("Translate");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -70,6 +74,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         JPanel displayInfo = new JPanel();
         JLabel displayLabel = new JLabel("Translation: ");
         displayInfo.add(displayLabel);
+
 
 
         JPanel buttons = new JPanel();
@@ -189,7 +194,8 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource().equals(relatedWords)) {
-                    RelatedState currentState = relatedViewModel.getState();
+                    // RelatedState currentState = relatedViewModel.getState();
+                    TranslateState currentState = translateViewModel.getState();
 
                     relatedController.execute(currentState.getOriginalText(),
                             translateViewModel.DISPLAY_ORIGINAL_LABEL);
@@ -269,7 +275,21 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
     }
 
     private void setFields(RelatedState state) {
-        // TODO logic for how to show related words from state.getRelatedWordsGenerated()
+        relatedPanel.removeAll();
+        relatedPanel.revalidate();
+        relatedPanel.repaint();
+
+        if (!state.getGeneratedWordsError().equals("")){
+            JLabel error = new JLabel(state.getGeneratedWordsError());
+            relatedPanel.add(error);
+        } else {
+            for (String word : state.getRelatedWordsGenerated()) {
+                JLabel relatedWord = new JLabel(word);
+                relatedPanel.add(relatedWord);
+            }
+        }
+        this.add(relatedPanel);
+
     }
 
     @Override

@@ -18,7 +18,8 @@ import java.beans.PropertyChangeListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-public class HistoryView extends JPanel implements ActionListener, PropertyChangeListener {public final String viewName = "Word History";
+public class HistoryView extends JPanel implements ActionListener, PropertyChangeListener {
+    public final String viewName = "history";
     private final HistoryViewModel historyViewModel;
     final JLabel originalWordField = new JLabel();
     final JLabel translatedWordField = new JLabel();
@@ -32,7 +33,8 @@ public class HistoryView extends JPanel implements ActionListener, PropertyChang
     public HistoryView(HistoryViewModel historyViewModel, HistoryController historyController){
         this.historyController = historyController;
         this.historyViewModel = historyViewModel;
-        this.historyViewModel.addPropertyChangeListener(this);
+
+        historyViewModel.addPropertyChangeListener(this);
 
         JLabel title = new JLabel("Word History");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -40,6 +42,11 @@ public class HistoryView extends JPanel implements ActionListener, PropertyChang
         historyTextArea = new JTextArea();
         historyTextArea.setEditable(false); // Sets as read-only
         JScrollPane scrollPane = new JScrollPane(historyTextArea);
+
+        if (historyViewModel.getState().getWordHistory() != null) {
+            updateHistoryTextArea(historyViewModel.getState().getWordHistory());
+        }
+
 
 
         JPanel originalInfo = new JPanel();
@@ -83,21 +90,37 @@ public class HistoryView extends JPanel implements ActionListener, PropertyChang
 
     public void propertyChange(PropertyChangeEvent evt){
         HistoryState state = (HistoryState) evt.getNewValue();
-//        setFields(state);
+        setFields(state);
 
     }
 
-    private void setFields(HistoryState state){}
+    private void setFields(HistoryState state){
+        updateHistoryTextArea(historyViewModel.getState().getWordHistory());
 
-    //    private void updateHistoryTextArea(ArrayList<Word> insertionOrder, HashMap<Word, Word> wordHistory){
-    //        historyTextArea.setText(""); // Clears existing text
-    //
-    //        //use wordhistoryDAO.insertionOrder for the arraylist and .wordHistory for the hashmap
-    //        for (Word word: insertionOrder){ // Assume wordHistory is of format [org1, trs1, org2, trs2, org3, trs3...]
-    //            String originalWord = word.getWord();
-    //            String translatedWord = wordHistory.getOrDefault(word, new TranslatedWord("", "fr")).getWord();
-    //            historyTextArea.append(originalWord + " - " + translatedWord + "\n");
-    //
-    //        }
-    //    }
+    }
+
+
+
+    private void updateHistoryTextArea(ArrayList<String> insertionOrder) {
+        historyTextArea.setText(""); // Clears existing text
+
+        // Iterate over pairs of original and translated words
+        for (int i = 0; i < insertionOrder.size(); i += 2) {
+            String originalWord = insertionOrder.get(i);
+            String translatedWord = insertionOrder.get(i + 1);
+
+            historyTextArea.append(originalWord + " - " + translatedWord + "\n");
+        }
+    }
+//        private void updateHistoryTextArea(ArrayList<Word> insertionOrder, HashMap<Word, Word> wordHistory){
+//            historyTextArea.setText(""); // Clears existing text
+//
+//            //use wordhistoryDAO.insertionOrder for the arraylist and .wordHistory for the hashmap
+//            for (Word word: insertionOrder){ // Assume wordHistory is of format [org1, trs1, org2, trs2, org3, trs3...]
+//                String originalWord = word.getWord();
+//                String translatedWord = wordHistory.getOrDefault(word, new TranslatedWord("", "fr")).getWord();
+//                historyTextArea.append(originalWord + " - " + translatedWord + "\n");
+//
+//            }
+//        }
 }

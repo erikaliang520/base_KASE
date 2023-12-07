@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="small bug fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryPresenterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryViewModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
+    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="fix to match with new HistoryView">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/HistoryUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/HistoryUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/HistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -103,7 +103,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20231206_0004",
-    "git-widget-placeholder": "history__test",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "20",
     "last_opened_file_path": "/Users/addisonluo/IdeaProjects/base_KASE",
     "node.js.detected.package.eslint": "true",
@@ -131,7 +131,7 @@
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HistoryControllerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="main" />
@@ -152,20 +152,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interface_adapter.test.history.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="interface_adapter.test.history" />
-      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.HistoryControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="base_KASE [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="OriginalWordRelatedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main" />
@@ -182,7 +189,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordHistoryDataAccessObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordHistoryManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main" />
       <extension name="coverage">
         <pattern>
@@ -191,7 +198,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="interface_adapter.test.history" />
-      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.WordHistoryDataAccessObjectTest" />
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.WordHistoryManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,17 +207,17 @@
     <list>
       <item itemvalue="Application.TextSpeech" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.HistoryControllerTest" />
-      <item itemvalue="JUnit.WordHistoryDataAccessObjectTest" />
+      <item itemvalue="Gradle.base_KASE [dependencies]" />
       <item itemvalue="JUnit.OriginalWordRelatedTest" />
+      <item itemvalue="JUnit.WordHistoryManagerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HistoryControllerTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.TextSpeech" />
-        <item itemvalue="JUnit.WordHistoryDataAccessObjectTest" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.OriginalWordRelatedTest" />
+        <item itemvalue="Gradle.base_KASE [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -269,21 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701924344546</updated>
     </task>
-    <task id="LOCAL-00005" summary="uncomment HistoryUseCaseFactory">
+    <task id="LOCAL-00005" summary="fully implemented Translate Similar Words button">
       <option name="closed" value="true" />
-      <created>1701928636492</created>
+      <created>1701929568877</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1701928636492</updated>
+      <updated>1701929568877</updated>
     </task>
-    <task id="LOCAL-00006" summary="small bug fixes">
+    <task id="LOCAL-00006" summary="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface.">
       <option name="closed" value="true" />
-      <created>1701929707551</created>
+      <created>1701380010682</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1701929707551</updated>
+      <updated>1701380010682</updated>
     </task>
     <task id="LOCAL-00007" summary="Refactoring History Manager files and testing files">
       <option name="closed" value="true" />
@@ -325,7 +332,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,8 +366,22 @@
     <MESSAGE value="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit" />
     <MESSAGE value="finished changes in All use case factory, updated main to use this factory" />
     <MESSAGE value="fix to match with new HistoryView" />
-    <MESSAGE value="uncomment HistoryUseCaseFactory" />
-    <MESSAGE value="small bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small bug fixes" />
+    <MESSAGE value="fully implemented Translate Similar Words button" />
+    <option name="LAST_COMMIT_MESSAGE" value="fully implemented Translate Similar Words button" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/view/TranslateView.java</url>
+          <line>225</line>
+          <properties method="actionPerformed">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
