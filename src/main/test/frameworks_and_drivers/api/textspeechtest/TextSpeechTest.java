@@ -2,8 +2,8 @@ package frameworks_and_drivers.api.textspeechtest;
 
 import frameworks_and_drivers.api.textspeech.ExternalTextSpeechService;
 import frameworks_and_drivers.api.textspeech.TextSpeechApiClient;
-import interface_adapter.api.textspeech.ExternalTextSpeechService;
-import interface_adapter.api.textspeech.TextSpeechApiClient;
+//import interface_adapter.api.textspeech.ExternalTextSpeechService;
+//import interface_adapter.api.textspeech.TextSpeechApiClient;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import java.io.IOException;
