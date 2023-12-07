@@ -3,18 +3,36 @@ package interface_adapter.test.history;
 import interface_adapter.history.HistoryController;
 import org.junit.Test;
 import use_case.history.HistoryInputBoundary;
-import static org.mockito.Mockito.*;
+import use_case.history.HistoryInputData;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class HistoryControllerTest {
     @Test
-    public void execute_CallsUseCaseInteractor() {
+    public void testExecute() {
         // Arrange
-        HistoryInputBoundary mockInteractor = mock(HistoryInputBoundary.class);
-        HistoryController historyController = new HistoryController(mockInteractor);
+        HistoryInputBoundary mockUseCaseInteractor = new MockHistoryUseCaseInteractor();
+        HistoryController historyController = new HistoryController(mockUseCaseInteractor);
 
         // Act
         historyController.execute();
 
         // Assert
-        verify(mockInteractor, times(1)).execute();
+        assertTrue(((MockHistoryUseCaseInteractor) mockUseCaseInteractor).isExecuteCalled());
+
+    }
+
+    private static class MockHistoryUseCaseInteractor implements HistoryInputBoundary {
+        private boolean executeCalled = false;
+        static HistoryInputData input;
+
+        @Override
+        public void execute(){
+            executeCalled = true;
+        }
+
+        public boolean isExecuteCalled(){
+            return executeCalled;
+        }
     }
 }

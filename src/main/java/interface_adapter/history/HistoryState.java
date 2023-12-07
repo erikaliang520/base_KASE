@@ -3,7 +3,7 @@ package interface_adapter.history;
 import java.util.ArrayList;
 public class HistoryState {
     private ArrayList<String> wordHistory;
-    private String historyError = null;
+    public String historyError = null;
     public HistoryState(HistoryState copy){
         this.wordHistory = copy.wordHistory;
 
