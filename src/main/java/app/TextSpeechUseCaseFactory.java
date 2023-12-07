@@ -28,15 +28,19 @@ public class TextSpeechUseCaseFactory {
     /** Prevent instantiation */
     private TextSpeechUseCaseFactory() {}
 
-    public static TextSpeechView create(
-            ViewManagerModel viewManagerModel,
+    public static TranslateView create(
+      // its apart of Translate View 
+//     public static TextSpeechView create(
+//             ViewManagerModel viewManagerModel,
+// 
+      
             TextSpeechViewModel textSpeechViewModel,
             TextSpeechDataAccessInterface textSpeechDataAccessObject) {
 
         try {
             TextSpeechController textSpeechController = createTextSpeechUseCase(viewManagerModel, textSpeechViewModel,
                     textSpeechDataAccessObject);
-            return new TextSpeechView(textSpeechViewModel, textSpeechController);
+            return new TranslateView(textSpeechViewModel, textSpeechController);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Could not open user data file.");
         }
