@@ -139,5 +139,6 @@
     <orderEntry type="library" name="quick-json-1.0.2.31" level="project" />
     <orderEntry type="library" name="quick-json-1.0.2.32" level="project" />
     <orderEntry type="library" name="quick-json-1.0.2.33" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.mockito:mockito-core:3.5.13" level="project" />
   </component>
 </module>
