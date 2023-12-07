@@ -2,7 +2,7 @@ package interface_adapter.datamuse4J.test;
 
 import interface_adapter.api.datamuse4J.src.datamuse.DatamuseQuery;
 
-class test {
+class DatamuseApiExample {
 
     public static void main(String[] args) {
         DatamuseQuery dQuery = new DatamuseQuery();

@@ -1,5 +1,14 @@
 package view;
 
+import interface_adapter.history.HistoryController;
+import interface_adapter.history.HistoryState;
+import interface_adapter.history.HistoryViewModel;
+import interface_adapter.related_words.RelatedController;
+import interface_adapter.related_words.RelatedState;
+import interface_adapter.related_words.RelatedViewModel;
+import interface_adapter.textspeech.TextSpeechController;
+import interface_adapter.textspeech.TextSpeechState;
+import interface_adapter.textspeech.TextSpeechViewModel;
 import interface_adapter.translate.TranslateController;
 import interface_adapter.translate.TranslateState;
 import interface_adapter.translate.TranslateViewModel;
@@ -17,23 +26,37 @@ import java.beans.PropertyChangeListener;
 import java.io.IOException;
 
 public class TranslateView extends JPanel implements ActionListener, PropertyChangeListener, DocumentListener {
-
-
     public final String viewName = "translate";
     private final TranslateViewModel translateViewModel;
-
     final JTextField wordInputField = new JTextField(15);
-
-    // final JButton translate;
+    final JButton history;
+    final JButton relatedWords;
+    final JButton listen;
     private final TranslateController translateController;
+    private final RelatedViewModel relatedViewModel;
+    private final RelatedController relatedController;
+    private final TextSpeechViewModel textSpeechViewModel;
+    private final TextSpeechController textSpeechController;
 
-    public TranslateView(TranslateViewModel translateViewModel,
-                         TranslateController translateController) {
+    private final HistoryViewModel historyViewModel;
+
+    private final HistoryController historyController;
+
+
+    public TranslateView(TranslateViewModel translateViewModel, TranslateController translateController,
+                         RelatedViewModel relatedViewModel, RelatedController relatedController,
+                         TextSpeechViewModel textSpeechViewModel, TextSpeechController textSpeechController,
+                         HistoryViewModel historyViewModel, HistoryController historyController) {
         this.translateViewModel = translateViewModel;
-
         this.translateController = translateController;
+        this.relatedViewModel = relatedViewModel;
+        this.relatedController = relatedController;
+        this.textSpeechViewModel = textSpeechViewModel;
+        this.textSpeechController = textSpeechController;
+        this.historyViewModel = historyViewModel;
+        this.historyController = historyController;
 
-        this.translateViewModel.addPropertyChangeListener(this);
+        translateViewModel.addPropertyChangeListener(this);
 
         JLabel title = new JLabel("Translate");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -48,8 +71,12 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
 
         JPanel buttons = new JPanel();
-        // translate = new JButton(translateViewModel.TRANSLATE_BUTTON_LABEL);
-        // buttons.add(translate);
+        relatedWords = new JButton(TranslateViewModel.GENERATE_RELATED_WORDS_BUTTON_LABEL);
+        buttons.add(relatedWords);
+        listen = new JButton(TranslateViewModel.AUDIO_BUTTON_LABEL);
+        buttons.add(listen);
+        history = new JButton(TranslateViewModel.HISTORY_BUTTON_LABEL);
+        buttons.add(history);
 
         // adding document listeners for the wordInputField for real time updates
         wordInputField.getDocument().addDocumentListener(new DocumentListener() {
@@ -116,7 +143,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             }
         });
 
-        // TODO add action listeners for new buttons here...
 
         // adding key listener for wordInputField to update the state if key is typed
         // not sure if this key listener is necessary, or if should just directly
@@ -157,6 +183,45 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             }
         });
 
+        relatedWords.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource().equals(relatedWords)) {
+                    RelatedState currentState = relatedViewModel.getState();
+
+                    relatedController.execute(currentState.getOriginalText(),
+                            translateViewModel.DISPLAY_ORIGINAL_LABEL);
+
+
+                }
+            }
+        });
+
+        listen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource().equals(listen)) {
+                    TextSpeechState currentState = textSpeechViewModel.getState();
+
+                    textSpeechController.execute(currentState.getOriginalText());
+
+                }
+            }
+        });
+
+        history.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource().equals(history)) {
+                    HistoryState currentState = historyViewModel.getState();
+
+                    historyController.execute();
+                }
+            }
+        });
+
+
+
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         JPanel infoPanel = new JPanel(new FlowLayout());
@@ -180,10 +245,17 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         if (evt.getPropertyName().equals("translate")) {
             TranslateState state = (TranslateState) evt.getNewValue();
             setFields(state);
+        } if (evt.getPropertyName().equals("related")) {
+            RelatedState state = (RelatedState) evt.getNewValue();
+            setFields(state);
         }
     }
     private void setFields(TranslateState state) {
         wordInputField.setText(state.getOriginalText());
+    }
+
+    private void setFields(RelatedState state) {
+        // TODO logic for how to show related words from state.getRelatedWordsGenerated()
     }
 
     @Override

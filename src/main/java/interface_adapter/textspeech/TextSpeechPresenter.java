@@ -9,7 +9,8 @@ public class TextSpeechPresenter implements TextSpeechOutputBoundary {
     private ViewManagerModel viewManagerModel;
     private final TextSpeechViewModel textSpeechViewModel;
 
-    public TextSpeechPresenter(TextSpeechViewModel textSpeechViewModel) {
+    public TextSpeechPresenter(ViewManagerModel viewManagerModel,
+                               TextSpeechViewModel textSpeechViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.textSpeechViewModel = textSpeechViewModel;
     }

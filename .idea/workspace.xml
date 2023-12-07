@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="general fixes to project structure, also made sure commented out method in TextSpeechView">
+    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/TranslateUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/TranslateUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/related_words/RelatedViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/related_words/RelatedViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/translate/TranslateViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/translate/TranslateViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,8 +101,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20231206_0001",
-    "git-widget-placeholder": "main",
+    "com.google.cloudcode.ide_session_index": "20231206_0002",
+    "git-widget-placeholder": "translate__gui5",
     "jdk.selected.JAVA_MODULE": "20",
     "last_opened_file_path": "/Users/karynal/CSC207/base_KASE/src/main/java/interface_adapter/api/datamuse4J",
     "node.js.detected.package.eslint": "true",
@@ -237,7 +240,7 @@
       <workItem from="1701574046981" duration="26133000" />
       <workItem from="1701653182836" duration="3534000" />
       <workItem from="1701827920548" duration="1079000" />
-      <workItem from="1701901666667" duration="2648000" />
+      <workItem from="1701901666667" duration="7913000" />
     </task>
     <task id="LOCAL-00001" summary="general fixes to project structure, also made sure commented out method in TextSpeechView">
       <option name="closed" value="true" />
@@ -247,13 +250,13 @@
       <option name="project" value="LOCAL" />
       <updated>1701903022396</updated>
     </task>
-    <task id="LOCAL-00002" summary="Created WordHistoryManager">
+    <task id="LOCAL-00002" summary="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit">
       <option name="closed" value="true" />
-      <created>1700948122375</created>
+      <created>1701904689936</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1700948122375</updated>
+      <updated>1701904689936</updated>
     </task>
     <task id="LOCAL-00003" summary="Create interface HistoryManager and 3 classes using the interface.">
       <option name="closed" value="true" />
@@ -327,7 +330,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +361,7 @@
     <MESSAGE value="Updating past old history version files" />
     <MESSAGE value="Implemented new strategy for translation since this is most flexible option given translation constraints" />
     <MESSAGE value="general fixes to project structure, also made sure commented out method in TextSpeechView" />
-    <option name="LAST_COMMIT_MESSAGE" value="general fixes to project structure, also made sure commented out method in TextSpeechView" />
+    <MESSAGE value="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit" />
   </component>
 </project>
