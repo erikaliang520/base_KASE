@@ -11,7 +11,7 @@ public class SynonymStrategy implements RelatedWordsSelectionStrategy {
     private final int topN;
 
     public SynonymStrategy(int topN) {
-        this.topN = topN;
+        this.topN = 3; // just choose 3 words for now...
     }
 
     private static List<String> getTopNStringAttributes(List<WordScore> wordScores, int topN) {
