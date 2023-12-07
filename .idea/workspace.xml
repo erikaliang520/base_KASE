@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit">
+    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="added buttons and actionlisteners for other use cases in the TranslateView">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/CreateAllUseCaseControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/GenerateRelatedWordsUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/GenerateRelatedWordsUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/RelatedWordsUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/RelatedWordsUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/TextSpeechUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/TextSpeechUseCaseFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/TranslateUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/TranslateUseCaseFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/history/WordHistoryDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/related_words/RelatedViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/related_words/RelatedViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/translate/TranslateViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/translate/TranslateViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/HistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/ControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +75,7 @@
     </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="99a6bf9a-25cb-4b92-8f99-618482432533" />
+        <option name="accountId" value="6116ede4-9c42-4fd0-a90a-3ee18d276906" />
         <option name="url" value="https://github.com/erikaliang520/base_KASE.git" />
       </UrlAndAccount>
     </option>
@@ -101,8 +106,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20231206_0002",
-    "git-widget-placeholder": "translate__gui5",
+    "com.google.cloudcode.ide_session_index": "20231206_0004",
+    "git-widget-placeholder": "allUseCaseFactory",
     "jdk.selected.JAVA_MODULE": "20",
     "last_opened_file_path": "/Users/karynal/CSC207/base_KASE/src/main/java/interface_adapter/api/datamuse4J",
     "node.js.detected.package.eslint": "true",
@@ -212,10 +217,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TranslateSwingExample" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.OriginalWordRelatedTest" />
         <item itemvalue="Gradle.base_KASE [dependencies]" />
-        <item itemvalue="JUnit.WordHistoryManagerTest" />
+        <item itemvalue="Application.TranslateSwingExample" />
       </list>
     </recent_temporary>
   </component>

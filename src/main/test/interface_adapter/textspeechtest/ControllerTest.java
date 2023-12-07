@@ -32,7 +32,7 @@ public class ControllerTest {
         String text = "Hello, World!";
 
         // When
-        controller.convertTextToSpeech(text);
+        controller.execute(text);
 
         // Then
         assertTrue(interactor.wasExecuteCalled());
@@ -46,7 +46,7 @@ public class ControllerTest {
         String text = "";
 
         // When
-        controller.convertTextToSpeech(text);
+        controller.execute(text);
 
         // Then
         assertTrue(interactor.wasExecuteCalled());
@@ -60,7 +60,7 @@ public class ControllerTest {
         String text = null;
 
         // When
-        controller.convertTextToSpeech(text);
+        controller.execute(text);
 
         // Then
         assertTrue(interactor.wasExecuteCalled());

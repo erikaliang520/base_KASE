@@ -1,6 +1,5 @@
 package app;
 
-import data_access.history.RelatedWordsHistoryDataAccessObject;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.factories.OriginalWordFactory;
 import entity.factories.TranslatedWordFactory;
@@ -36,15 +35,17 @@ import use_case.translate.TranslateDataAccessInterface;
 import use_case.translate.TranslateInputBoundary;
 import use_case.translate.TranslateInteractor;
 import use_case.translate.TranslateOutputBoundary;
+import view.HistoryView;
+import view.TranslateView;
 
 import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateAllUseCaseControllers {
+public class AllUseCaseFactory {
 
-    private CreateAllUseCaseControllers() {}
+    private AllUseCaseFactory() {}
 
     // returns all controllers in a list
 
@@ -59,16 +60,15 @@ public class CreateAllUseCaseControllers {
             TextSpeechViewModel textSpeechViewModel,
 
             // DAOs to keep track of depending on which info's saved
-            TranslateDataAccessInterface translateDataAccessInterface,
+            TranslateDataAccessInterface translateDataAccessObject,
             HistoryDataAccessInterface historyDataAccessInterface,
-            TextSpeechDataAccessInterface textSpeechDataAccessInterface,
-            RelatedWordDataAccessInterface relatedWordDataAccessInterface,
-            RelatedWordsHistoryDataAccessObject relatedWordsHistoryDataAccessObject
+            TextSpeechDataAccessInterface textSpeechDataAccessObject,
+            RelatedWordDataAccessInterface relatedWordDataAccessObject
     ) {
         try {
-            RelatedController relatedController = createRelatedUseCase(viewManagerModel, relatedViewModel, relatedWordDataAccessInterface);
-            TranslateController translateController = createTranslateUseCase(viewManagerModel, translateViewModel, translateDataAccessInterface);
-            TextSpeechController textSpeechController = createTextSpeechUseCase();
+            RelatedController relatedController = createRelatedUseCase(viewManagerModel, relatedViewModel, relatedWordDataAccessObject);
+            TranslateController translateController = createTranslateUseCase(viewManagerModel, translateViewModel, translateDataAccessObject);
+            TextSpeechController textSpeechController = createTextSpeechUseCase(viewManagerModel, textSpeechViewModel, textSpeechDataAccessObject);
             HistoryController historyController = createHistoryUseCase(viewManagerModel, historyViewModel, historyDataAccessInterface);
 
             // TODO might have to make ViewModels and Controllers for
@@ -78,15 +78,22 @@ public class CreateAllUseCaseControllers {
             // TODO: below would be the returned view based on the use case, everything else shuld be same / implemented
 
             // return new TranslateView(relatedViewModel, relatedController); // View for this use case?
-            List<Object> allControllers = new ArrayList<>();
+            List<Object> allViews = new ArrayList<>();
 
-            // index: 0 - translate, 1 - history, 2 - related, 3 - txt speech
-            allControllers.add(translateController);
-            allControllers.add(historyController);
-            allControllers.add(relatedController);
-            allControllers.add(textSpeechController);
+            TranslateView translateView = new TranslateView(translateViewModel, translateController,
+                    relatedViewModel, relatedController,
+                    textSpeechViewModel, textSpeechController,
+                    historyViewModel, historyController);
 
-            return allControllers;
+
+            // TODO finish historyView file
+            HistoryView historyView = new HistoryView();
+
+            // index: 0 - translate, 1 - history
+            allViews.add(translateView);
+            allViews.add(historyView);
+
+            return allViews;
 
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Could not open word data file.");
@@ -150,19 +157,19 @@ public class CreateAllUseCaseControllers {
         return new RelatedController(relatedInteractor);
     }
 
-    // TODO ask sophie why she doens't have a view model manager attribute
 
-//    private static TextSpeechController createTextSpeechUseCase(
-//            TextSpeechViewModel textSpeechViewModel,
-//            TextSpeechDataAccessInterface textSpeechDataAccessObject) throws IOException {
-//
-//        TextSpeechOutputBoundary textSpeechOutputBoundary = new TextSpeechPresenter(textSpeechViewModel);
-//
-//        TextSpeechInputBoundary textSpeechInteractor = new TextSpeechInteractor(textSpeechDataAccessObject,
-//                textSpeechOutputBoundary);
-//
-//        return new TextSpeechController(textSpeechInteractor);
-//    }
+    private static TextSpeechController createTextSpeechUseCase(
+            ViewManagerModel viewManagerModel,
+            TextSpeechViewModel textSpeechViewModel,
+            TextSpeechDataAccessInterface textSpeechDataAccessObject) throws IOException {
+
+        TextSpeechOutputBoundary textSpeechOutputBoundary = new TextSpeechPresenter(viewManagerModel, textSpeechViewModel);
+
+        TextSpeechInputBoundary textSpeechInteractor = new TextSpeechInteractor(textSpeechDataAccessObject,
+                textSpeechOutputBoundary);
+
+        return new TextSpeechController(textSpeechInteractor);
+    }
 
 
 }
