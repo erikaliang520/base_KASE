@@ -11,6 +11,7 @@ import use_case.textspeech.TextSpeechOutputData;
 import use_case.textspeech.TextSpeechInteractor;
 import use_case.textspeech.TextSpeechInputData;
 import use_case.textspeech.TextSpeechOutputBoundary;
+import view.TranslateView;
 
 
 import javax.swing.*;
@@ -21,14 +22,14 @@ public class TextSpeechUseCaseFactory {
     /** Prevent instantiation */
     private TextSpeechUseCaseFactory() {}
 
-    public static TextSpeechView create(
+    public static TranslateView create(
             TextSpeechViewModel textSpeechViewModel,
             TextSpeechDataAccessInterface textSpeechDataAccessObject) {
 
         try {
             TextSpeechController textSpeechController = createTextSpeechUseCase(textSpeechViewModel,
                     textSpeechDataAccessObject);
-            return new TextSpeechView(textSpeechViewModel, textSpeechController);
+            return new TranslateView(textSpeechViewModel, textSpeechController);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Could not open user data file.");
         }
