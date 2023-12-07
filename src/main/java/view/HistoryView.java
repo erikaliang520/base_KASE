@@ -83,7 +83,7 @@ public class HistoryView extends JPanel implements ActionListener, PropertyChang
 
     public void propertyChange(PropertyChangeEvent evt){
         HistoryState state = (HistoryState) evt.getNewValue();
-        setFields(state);
+//        setFields(state);
 
     }
 
