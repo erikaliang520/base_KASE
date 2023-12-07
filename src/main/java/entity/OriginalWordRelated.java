@@ -2,7 +2,7 @@ package entity;
 
 import java.util.List;
 
-public class OriginalWordRelated implements WordRelated{
+public class OriginalWordRelated implements Word{
 
     private final String word;
 

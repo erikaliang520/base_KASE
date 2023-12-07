@@ -3,7 +3,6 @@ package entity.factories;
 import entity.Word;
 import entity.OriginalWord;
 import entity.OriginalWordRelated;
-import entity.WordRelated;
 
 import java.util.List;
 

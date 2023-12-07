@@ -1,7 +1,6 @@
 package entity.factories;
 
 import entity.Word;
-import entity.WordRelated;
 
 import java.util.List;
 
