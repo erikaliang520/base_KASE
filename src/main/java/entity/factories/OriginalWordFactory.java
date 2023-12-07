@@ -14,7 +14,7 @@ public class OriginalWordFactory implements WordFactory, OriginalRelatedWordFact
     }
 
     @Override
-    public WordRelated createWord(String userWord, String userLanguage, List<String> computedRelatedWords) {
+    public Word createWord(String userWord, String userLanguage, List<String> computedRelatedWords) {
         return new OriginalWordRelated(userWord, userLanguage, computedRelatedWords);
     }
 

@@ -1,10 +1,11 @@
 package use_case.related_words.related_words_generate;
 
+import entity.Word;
 import entity.WordRelated;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.factories.OriginalWordFactory;
 import entity.related_words.RelatedWordsSelectionStrategy;
-import interface_adapter.api.datamuse4J.src.datamuse.SynonymStrategy;
+import frameworks_and_drivers.api.datamuse4J.src.datamuse.SynonymStrategy;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -18,13 +19,13 @@ class RelatedInteractorTest {
     void successTest(){
 
         RelatedInputData relatedInputData = new RelatedInputData("apple", "english");
-        List<WordRelated> saver = new ArrayList<WordRelated>();
+        List<Word> saver = new ArrayList<Word>();
         RelatedWordDataAccessInterface wordRepository = new RelatedWordDataAccessInterface() {
             @Override
-            public void save(WordRelated word) {
+            public void save(Word word) {
                 saver.add(word);
-            }
-        };
+            }};
+
         RelatedWordsSelectionStrategy strategy = new SynonymStrategy(3);
         OriginalRelatedWordFactory factory = new OriginalWordFactory();
 
@@ -54,10 +55,10 @@ class RelatedInteractorTest {
     @Test
     void failTestWhenNoGeneratedWordsExist() {
         RelatedInputData inputData = new RelatedInputData("abcdefjswfrih", "english");
-        List<WordRelated> saver = new ArrayList<WordRelated>();
+        List<Word> saver = new ArrayList<Word>();
         RelatedWordDataAccessInterface wordRepository = new RelatedWordDataAccessInterface() {
             @Override
-            public void save(WordRelated word) {
+            public void save(Word word) {
                 saver.add(word);
             }
         };
@@ -66,7 +67,7 @@ class RelatedInteractorTest {
 
 
         OriginalRelatedWordFactory factory = new OriginalWordFactory();
-        WordRelated word = factory.createWord("abcdefjswfrih", "english", strategy.selectTopWordsStrategy("abcdefjswfrih"));
+        Word word = factory.createWord("abcdefjswfrih", "english", strategy.selectTopWordsStrategy("abcdefjswfrih"));
         wordRepository.save(word);
 
         //This creates a presenter that tests whether the test case is as we expect.

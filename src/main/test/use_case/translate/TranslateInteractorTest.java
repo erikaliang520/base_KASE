@@ -5,9 +5,10 @@ import entity.Word;
 import entity.factories.OriginalWordFactory;
 import entity.factories.TranslatedWordFactory;
 import entity.factories.WordFactory;
-import interface_adapter.api.google_translate.ExternalTranslateService;
+import entity.translate.TranslateService;
+//import interface_adapter.api.google_translate.ExternalTranslateService;
 import org.junit.jupiter.api.Test;
-import use_case.ports.api.TranslateService;
+//import use_case.ports.api.TranslateService;
 
 import java.io.IOException;
 import java.util.ArrayList;

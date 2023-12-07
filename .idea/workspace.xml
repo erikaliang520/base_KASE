@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="fix to match with new HistoryView">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/HistoryUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/HistoryUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/history/HistoryViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/HistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HistoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/factories/OriginalRelatedWordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/factories/OriginalRelatedWordFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/factories/OriginalWordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/factories/OriginalWordFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/related_words/related_words_generate/RelatedWordDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/related_words/related_words_generate/RelatedWordDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/datamuse4J/test/DatamuseApiExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/datamuse4J/test/DatamuseApiExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/use_case/related_words/related_words_generate/RelatedInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/use_case/related_words/related_words_generate/RelatedInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/use_case/textspeech/TextSpeechInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/use_case/textspeech/TextSpeechInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/use_case/translate/TranslateInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/use_case/translate/TranslateInteractorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,9 +102,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20231206_0004",
+    "com.google.cloudcode.ide_session_index": "20231207_0000",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "20",
+    "last_directory_selection": "/Users/karynal/CSC207/base_KASE/src/main/java/entity",
     "last_opened_file_path": "/Users/addisonluo/IdeaProjects/base_KASE",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -243,6 +244,7 @@
       <workItem from="1701653182836" duration="3534000" />
       <workItem from="1701827920548" duration="1079000" />
       <workItem from="1701901666667" duration="7913000" />
+      <workItem from="1701961468250" duration="1138000" />
     </task>
     <task id="LOCAL-00001" summary="general fixes to project structure, also made sure commented out method in TextSpeechView">
       <option name="closed" value="true" />

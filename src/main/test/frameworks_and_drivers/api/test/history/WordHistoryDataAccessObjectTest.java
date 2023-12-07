@@ -1,4 +1,4 @@
-package interface_adapter.test.history;
+package frameworks_and_drivers.api.test.history;
 import entity.OriginalWord;
 import entity.TranslatedWord;
 import entity.Word;

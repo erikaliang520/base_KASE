@@ -1,5 +1,6 @@
-package interface_adapter.related_words;
+package frameworks_and_drivers.api.related_words;
 
+import interface_adapter.related_words.RelatedController;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

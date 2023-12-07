@@ -6,5 +6,5 @@ import entity.WordRelated;
 import java.util.List;
 
 public interface OriginalRelatedWordFactory {
-    public WordRelated createWord(String userWord, String userLanguage, List<String> computedRelatedWords);
+    public Word createWord(String userWord, String userLanguage, List<String> computedRelatedWords);
 }

@@ -1,7 +1,8 @@
-package interface_adapter.related_words;
+package frameworks_and_drivers.api.related_words;
 
 import interface_adapter.ViewModel;
-import interface_adapter.test.history.HistoryViewModelTest;
+import interface_adapter.related_words.RelatedState;
+import interface_adapter.related_words.RelatedViewModel;
 import org.junit.jupiter.api.Test;
 
 import java.beans.PropertyChangeEvent;

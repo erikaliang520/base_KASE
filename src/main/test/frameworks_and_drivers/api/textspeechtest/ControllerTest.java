@@ -1,10 +1,12 @@
-package interface_adapter.textspeechtest;
+package frameworks_and_drivers.api.textspeechtest;
 
 import interface_adapter.textspeech.TextSpeechController;
 
 import org.junit.jupiter.api.Test;
 import use_case.textspeech.TextSpeechInputBoundary;
 import use_case.textspeech.TextSpeechInputData;
+
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -25,7 +27,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void testConvertTextToSpeech() {
+    public void testConvertTextToSpeech() throws IOException {
         // Given
         TextSpeechInputBoundaryStub interactor = new TextSpeechInputBoundaryStub();
         TextSpeechController controller = new TextSpeechController(interactor);
@@ -39,7 +41,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void testConvertTextToSpeechWithEmptyText() {
+    public void testConvertTextToSpeechWithEmptyText() throws IOException {
         // Given
         TextSpeechInputBoundaryStub interactor = new TextSpeechInputBoundaryStub();
         TextSpeechController controller = new TextSpeechController(interactor);
@@ -53,7 +55,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void testConvertTextToSpeechWithNullText() {
+    public void testConvertTextToSpeechWithNullText() throws IOException {
         // Given
         TextSpeechInputBoundaryStub interactor = new TextSpeechInputBoundaryStub();
         TextSpeechController controller = new TextSpeechController(interactor);

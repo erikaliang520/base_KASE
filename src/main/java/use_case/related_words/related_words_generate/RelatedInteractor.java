@@ -1,6 +1,6 @@
 package use_case.related_words.related_words_generate;
 
-import entity.WordRelated;
+import entity.Word;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.related_words.RelatedWordsSelectionStrategy;
 
@@ -23,7 +23,7 @@ public class RelatedInteractor implements RelatedInputBoundary {
     public void execute(RelatedInputData relatedInputData) {
         List<String> generatedWords = strategy.selectTopWordsStrategy(relatedInputData.getWord());
         RelatedOutputData relatedOutputData = new RelatedOutputData(relatedInputData.getWord(), relatedInputData.getLanguage(), generatedWords);
-        WordRelated word = relatedWordsFactory.createWord(relatedInputData.getWord(), relatedInputData.getLanguage(), generatedWords);
+        Word word = relatedWordsFactory.createWord(relatedInputData.getWord(), relatedInputData.getLanguage(), generatedWords);
         relatedDataAccessObject.save(word);
 
         // when the list of generated words is NOT empty:

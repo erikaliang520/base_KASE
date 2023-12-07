@@ -1,10 +1,11 @@
 package use_case.textspeech;
 
+import entity.text_to_speech.TextSpeechService;
 import org.junit.jupiter.api.Test;
 import use_case.history.HistoryDataAccessInterface;
 import use_case.history.HistoryOutputBoundary;
 import use_case.history.HistoryOutputData;
-import use_case.ports.api.TextSpeechService;
+//import use_case.ports.api.TextSpeechService;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1,7 +1,8 @@
-package interface_adapter.related_words;
+package frameworks_and_drivers.api.related_words;
 
 import entity.OriginalWord;
 import entity.Word;
+import interface_adapter.related_words.RelatedState;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

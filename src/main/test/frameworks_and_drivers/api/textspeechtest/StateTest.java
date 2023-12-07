@@ -1,4 +1,4 @@
-package interface_adapter.textspeechtest;
+package frameworks_and_drivers.api.textspeechtest;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
