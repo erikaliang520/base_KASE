@@ -71,7 +71,7 @@ public class AllUseCaseFactory {
             RelatedController relatedController = createRelatedUseCase(viewManagerModel, relatedViewModel, relatedWordDataAccessObject);
             TranslateController translateController = createTranslateUseCase(viewManagerModel, translateViewModel, translateDataAccessObject);
             TextSpeechController textSpeechController = createTextSpeechUseCase(viewManagerModel, textSpeechViewModel, textSpeechDataAccessObject);
-            HistoryController historyController = createHistoryUseCase(viewManagerModel, historyViewModel, historyDataAccessInterface);
+            HistoryController historyController = createHistoryUseCase(viewManagerModel, historyViewModel, historyDataAccessInterface, translateViewModel);
 
             // TODO might have to make ViewModels and Controllers for
             // TODO speechtext , translate and relatedwords implement same interface / class
@@ -127,9 +127,10 @@ public class AllUseCaseFactory {
     private static HistoryController createHistoryUseCase(
             ViewManagerModel viewManagerModel,
             HistoryViewModel historyViewModel,
-            HistoryDataAccessInterface historyDataAccessObject) throws IOException {
+            HistoryDataAccessInterface historyDataAccessObject,
+            TranslateViewModel translateViewModel) throws IOException {
 
-        HistoryOutputBoundary historyPresenter = new HistoryPresenter(viewManagerModel, historyViewModel);
+        HistoryOutputBoundary historyPresenter = new HistoryPresenter(translateViewModel, viewManagerModel, historyViewModel);
 
         HistoryInputBoundary historyInteractor = new HistoryInteractor(historyDataAccessObject, historyPresenter);
 
