@@ -14,7 +14,7 @@ public class TextSpeechController {
 
 
     public void execute(String text) throws IOException {
-        TextSpeechInputData inputData = new TextSpeechInputData();
+        TextSpeechInputData inputData = new TextSpeechInputData(text);
         textSpeechinteractor.execute(inputData);
     }
 }

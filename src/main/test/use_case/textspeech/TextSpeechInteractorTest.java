@@ -45,7 +45,7 @@ class TextSpeechInteractorTest {
             }
         };
 
-        TextSpeechInputData input = new TextSpeechInputData();
+        TextSpeechInputData input = new TextSpeechInputData("song");
         input.InputData("song");
 
         TextSpeechInteractor interactorText = new TextSpeechInteractor(repo, textSpeechOutputBoundary, textSpeechService);

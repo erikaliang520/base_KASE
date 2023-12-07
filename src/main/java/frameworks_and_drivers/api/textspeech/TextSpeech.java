@@ -1,17 +1,26 @@
 package frameworks_and_drivers.api.textspeech;
 
 
+import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.texttospeech.v1.*;
 import com.google.protobuf.ByteString;
 
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 
 public class TextSpeech {
     public static void main(String... args) throws Exception {
-        try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
+        String credentialsPath = "speech_api.json";
+
+        GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(credentialsPath));
+        TextToSpeechSettings textToSpeechSettings = TextToSpeechSettings.newBuilder()
+                .setCredentialsProvider(() -> credentials)
+                .build();
+
+        try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings)) {
             // Set the text input to be synthesized
             SynthesisInput input = SynthesisInput.newBuilder()
                     .setText("Bonjour")

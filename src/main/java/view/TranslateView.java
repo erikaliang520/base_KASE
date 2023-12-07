@@ -13,6 +13,9 @@ import interface_adapter.translate.TranslateController;
 import interface_adapter.translate.TranslateState;
 import interface_adapter.translate.TranslateViewModel;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -23,8 +26,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
+
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 
 public class TranslateView extends JPanel implements ActionListener, PropertyChangeListener, DocumentListener {
@@ -63,6 +70,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         translateViewModel.addPropertyChangeListener(this);
         relatedViewModel.addPropertyChangeListener(this);
         historyViewModel.addPropertyChangeListener(this);
+        textSpeechViewModel.addPropertyChangeListener(this);
 
         JLabel title = new JLabel("Translate");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -209,7 +217,8 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource().equals(listen)) {
-                    TextSpeechState currentState = textSpeechViewModel.getState();
+                    //TextSpeechState currentState = textSpeechViewModel.getState();
+                    TranslateState currentState = translateViewModel.getState();
 
                     try {
                         textSpeechController.execute(currentState.getOriginalText());
@@ -267,8 +276,79 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
     }
 
     private void playAudio(String filePath) {
-        // TODO later
+        System.out.println(filePath);
+        new JFXPanel(); // Initialize JavaFX toolkit
+
+        Platform.runLater(() -> {
+            Media media = new Media(new File(filePath).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.play();
+        });
+
+//        SwingUtilities.invokeLater(() -> {
+//            try {
+//                FileInputStream fileInputStream = new FileInputStream(filePath);
+//                Bitstream bitstream = new Bitstream(fileInputStream);
+//
+//
+//                int frames = bitstream.readFrame().max_number_of_frames(fileInputStream);
+//                int durationInSeconds = frames / bitstream.readFrame().max_number_of_frames(fileInputStream);
+//
+//                JFrame frame = new JFrame("MP3 Player");
+//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                frame.setSize(300, 100);
+//                frame.setLocationRelativeTo(null);
+//
+//                JButton playButton = new JButton("Play");
+//                JButton stopButton = new JButton("Stop");
+//
+//                playButton.addActionListener(e -> play(filePath, 2)); // duration in seconds at most is 2
+//                stopButton.addActionListener(e -> stop());
+//
+//                JPanel panel = new JPanel();
+//                panel.add(playButton);
+//                panel.add(stopButton);
+//
+//                frame.getContentPane().add(panel);
+//                frame.setVisible(true);
+//            } catch (IOException | JavaLayerException ex) {
+//                ex.printStackTrace();
+//            }
+//        });
     }
+//
+//    private static void play(String filePath, int durationInSeconds) {
+//        SwingUtilities.invokeLater(() -> {
+//            try {
+//                FileInputStream fileInputStream = new FileInputStream(filePath);
+//                AdvancedPlayer player = new AdvancedPlayer(fileInputStream);
+//
+//                player.setPlayBackListener(new PlaybackListener() {
+//                    @Override
+//                    public void playbackFinished(PlaybackEvent evt) {
+//                        // Stop playback after the specified duration
+//                        if (player.getTotalFrames() > durationInSeconds) {
+//                            stop();
+//                        }
+//                    }
+//                });
+//
+//                new Thread(() -> {
+//                    try {
+//                        player.play();
+//                    } catch (JavaLayerException e) {
+//                        e.printStackTrace();
+//                    }
+//                }).start();
+//            } catch (IOException | JavaLayerException ex) {
+//                ex.printStackTrace();
+//            }
+//        });
+//    }
+//
+//    private static void stop() {
+//        System.exit(0);
+//    }
 
     private void setFields(TranslateState state) {
         //wordInputField.setText(state.getOriginalText());

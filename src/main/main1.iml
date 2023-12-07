@@ -118,5 +118,19 @@
     <orderEntry type="library" name="quick-json-1.0.2.32" level="project" />
     <orderEntry type="library" name="quick-json-1.0.2.33" level="project" />
     <orderEntry type="library" name="quick-json-1.0.2.34" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.umjammer:jlayer:1.0.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib" />
+        </NATIVE>
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
