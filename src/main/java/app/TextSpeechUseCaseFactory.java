@@ -1,5 +1,11 @@
 package app;
 
+import interface_adapter.ViewManagerModel;
+import interface_adapter.translate.TranslateController;
+import interface_adapter.translate.TranslatePresenter;
+import interface_adapter.translate.TranslateViewModel;
+import use_case.translate.TranslateDataAccessInterface;
+import use_case.translate.TranslateOutputBoundary;
 import view.TextSpeechView;
 import interface_adapter.textspeech.TextSpeechViewModel;
 import use_case.textspeech.TextSpeechDataAccessInterface;
@@ -11,6 +17,7 @@ import use_case.textspeech.TextSpeechOutputData;
 import use_case.textspeech.TextSpeechInteractor;
 import use_case.textspeech.TextSpeechInputData;
 import use_case.textspeech.TextSpeechOutputBoundary;
+import view.TranslateView;
 
 
 import javax.swing.*;
@@ -22,11 +29,12 @@ public class TextSpeechUseCaseFactory {
     private TextSpeechUseCaseFactory() {}
 
     public static TextSpeechView create(
+            ViewManagerModel viewManagerModel,
             TextSpeechViewModel textSpeechViewModel,
             TextSpeechDataAccessInterface textSpeechDataAccessObject) {
 
         try {
-            TextSpeechController textSpeechController = createTextSpeechUseCase(textSpeechViewModel,
+            TextSpeechController textSpeechController = createTextSpeechUseCase(viewManagerModel, textSpeechViewModel,
                     textSpeechDataAccessObject);
             return new TextSpeechView(textSpeechViewModel, textSpeechController);
         } catch (IOException e) {
@@ -37,10 +45,12 @@ public class TextSpeechUseCaseFactory {
     }
 
     private static TextSpeechController createTextSpeechUseCase(
-            TextSpeechViewModel textSpeechViewModel,
+            ViewManagerModel viewManagerModel,
+            TextSpeechViewModel textspeechViewModel,
             TextSpeechDataAccessInterface textSpeechDataAccessObject) throws IOException {
 
-        TextSpeechOutputBoundary textSpeechOutputBoundary = new TextSpeechPresenter(textSpeechViewModel);
+        TextSpeechOutputBoundary textSpeechOutputBoundary = new TextSpeechPresenter(viewManagerModel,
+                textspeechViewModel);
 
         TextSpeechInputBoundary textSpeechInteractor = new TextSpeechInteractor(textSpeechDataAccessObject,
                 textSpeechOutputBoundary);
