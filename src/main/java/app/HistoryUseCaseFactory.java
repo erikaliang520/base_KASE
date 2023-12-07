@@ -1,6 +1,8 @@
 package app;
 
 import data_access.history.WordHistoryDataAccessObject;
+import entity.factories.OriginalWordFactory;
+import entity.factories.TranslatedWordFactory;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.history.HistoryController;
 import interface_adapter.history.HistoryPresenter;
@@ -36,9 +38,12 @@ public class HistoryUseCaseFactory {
             ViewManagerModel viewManagerModel,
             HistoryViewModel historyViewModel,
             HistoryDataAccessInterface historyDataAccessObject) throws IOException {
-        HistoryOutputBoundary historyPresenter = new HistoryPresenter(viewManagerModel, historyViewModel);
 
+        HistoryOutputBoundary historyPresenter = new HistoryPresenter(viewManagerModel, historyViewModel);
         HistoryInputBoundary historyInteractor = new HistoryInteractor(historyDataAccessObject, historyPresenter);
+
+        OriginalWordFactory originalWordFactory = new OriginalWordFactory();
+        TranslatedWordFactory translatedWordFactory = new TranslatedWordFactory();
 
         return new HistoryController(historyInteractor);
     }

@@ -8,12 +8,11 @@ import java.io.IOException;
 
 import entity.factories.OriginalWordFactory;
 import entity.factories.TranslatedWordFactory;
-import entity.factories.WordFactory;
 import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WordHistoryManagerTest {
+public class WordHistoryDataAccessObjectTest {
     private WordHistoryDataAccessObject historyManager;
     private Word originalWord1;
     private Word originalWord2;
