@@ -2,11 +2,11 @@ package interface_adapter.textspeech;
 
 public class TextSpeechState {
     private String originalText = "";
-    private String spokenText = null;
+    private String spokenText = "";
 
     public TextSpeechState(TextSpeechState copy) {
         originalText = copy.originalText;
-        spokenText = copy.spokenText;
+        spokenText = copy.spokenText == null ? "" : copy.spokenText;
     }
 
     // Because of the previous copy constructor, the default constructor must be explicit.
@@ -25,10 +25,8 @@ public class TextSpeechState {
     }
 
     public void setSpokenText(String spokenText) {
-        this.spokenText = spokenText;
+        this.spokenText = spokenText == null ? "" : spokenText;
     }
-
 }
-
 
 

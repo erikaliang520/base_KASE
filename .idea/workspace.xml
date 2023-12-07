@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="general fixes to project structure, also made sure commented out method in TextSpeechView">
+    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="fix to match with new HistoryView">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/google_translate/TranslateApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/ExternalTextSpeechService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/ExternalTextSpeechService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/TextSpeechApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/TextSpeechApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechOutputData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/TextSpeechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/TextSpeechTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +81,7 @@
     </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="99a6bf9a-25cb-4b92-8f99-618482432533" />
+        <option name="accountId" value="6116ede4-9c42-4fd0-a90a-3ee18d276906" />
         <option name="url" value="https://github.com/erikaliang520/base_KASE.git" />
       </UrlAndAccount>
     </option>
@@ -98,10 +112,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20231206_0001",
-    "git-widget-placeholder": "main",
+    "com.google.cloudcode.ide_session_index": "20231206_0004",
+    "git-widget-placeholder": "TextSpeechButton",
     "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "/Users/karynal/CSC207/base_KASE/src/main/java/interface_adapter/api/datamuse4J",
+    "last_opened_file_path": "/Users/addisonluo/IdeaProjects/base_KASE",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,6 +129,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/interface_adapter/api/datamuse4J" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -140,9 +155,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TranslateSwingExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TranslateSwingExample" />
-      <module name="main" />
+    <configuration name="TextSpeech" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TextSpeech" />
+      <module name="api.cloudtranslateapitest2.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -200,8 +215,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.TextSpeech" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TranslateSwingExample" />
       <item itemvalue="Gradle.base_KASE [dependencies]" />
       <item itemvalue="JUnit.OriginalWordRelatedTest" />
       <item itemvalue="JUnit.WordHistoryManagerTest" />
@@ -209,10 +224,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TranslateSwingExample" />
+        <item itemvalue="Application.TextSpeech" />
+        <item itemvalue="JUnit.WordHistoryManagerTest" />
         <item itemvalue="JUnit.OriginalWordRelatedTest" />
         <item itemvalue="Gradle.base_KASE [dependencies]" />
-        <item itemvalue="JUnit.WordHistoryManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +252,7 @@
       <workItem from="1701574046981" duration="26133000" />
       <workItem from="1701653182836" duration="3534000" />
       <workItem from="1701827920548" duration="1079000" />
-      <workItem from="1701901666667" duration="2648000" />
+      <workItem from="1701901666667" duration="7913000" />
     </task>
     <task id="LOCAL-00001" summary="general fixes to project structure, also made sure commented out method in TextSpeechView">
       <option name="closed" value="true" />
@@ -247,29 +262,29 @@
       <option name="project" value="LOCAL" />
       <updated>1701903022396</updated>
     </task>
-    <task id="LOCAL-00002" summary="Created WordHistoryManager">
+    <task id="LOCAL-00002" summary="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit">
       <option name="closed" value="true" />
-      <created>1700948122375</created>
+      <created>1701904689936</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1700948122375</updated>
+      <updated>1701904689936</updated>
     </task>
-    <task id="LOCAL-00003" summary="Create interface HistoryManager and 3 classes using the interface.">
+    <task id="LOCAL-00003" summary="finished changes in All use case factory, updated main to use this factory">
       <option name="closed" value="true" />
-      <created>1701310789359</created>
+      <created>1701923916287</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1701310789359</updated>
+      <updated>1701923916287</updated>
     </task>
-    <task id="LOCAL-00004" summary="Untracked files need to be committed">
+    <task id="LOCAL-00004" summary="fix to match with new HistoryView">
       <option name="closed" value="true" />
-      <created>1701312489097</created>
+      <created>1701924344546</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1701312489097</updated>
+      <updated>1701924344546</updated>
     </task>
     <task id="LOCAL-00005" summary="placing entities into entity package">
       <option name="closed" value="true" />
@@ -327,7 +342,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +373,9 @@
     <MESSAGE value="Updating past old history version files" />
     <MESSAGE value="Implemented new strategy for translation since this is most flexible option given translation constraints" />
     <MESSAGE value="general fixes to project structure, also made sure commented out method in TextSpeechView" />
-    <option name="LAST_COMMIT_MESSAGE" value="general fixes to project structure, also made sure commented out method in TextSpeechView" />
+    <MESSAGE value="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit" />
+    <MESSAGE value="finished changes in All use case factory, updated main to use this factory" />
+    <MESSAGE value="fix to match with new HistoryView" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix to match with new HistoryView" />
   </component>
 </project>

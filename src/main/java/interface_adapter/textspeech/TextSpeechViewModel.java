@@ -16,7 +16,7 @@ public class TextSpeechViewModel extends ViewModel {
     private final PropertyChangeSupport support = new PropertyChangeSupport(this);
 
     public void firePropertyChanged() {
-        support.firePropertyChange("state", null, this.state);
+        support.firePropertyChange("speech", null, this.state);
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
@@ -28,8 +28,10 @@ public class TextSpeechViewModel extends ViewModel {
     }
 
     public void setState(TextSpeechState state) {
+        if(state == null) {
+            throw new IllegalArgumentException("state cannot be null");
+        }
         this.state = state;
     }
 }
-
 

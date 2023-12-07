@@ -1,5 +1,4 @@
 package view;
-
 import entity.TranslatedWord;
 import entity.Word;
 import interface_adapter.history.HistoryController;

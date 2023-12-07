@@ -7,6 +7,7 @@ import entity.TranslatedWord;
 import entity.Word;
 import entity.factories.WordFactory;
 import use_case.history.HistoryDataAccessInterface;
+import use_case.textspeech.TextSpeechDataAccessInterface;
 import use_case.translate.TranslateDataAccessInterface;
 
 import java.io.*;
@@ -15,7 +16,8 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class WordHistoryDataAccessObject implements HistoryDataAccessInterface, TranslateDataAccessInterface {
+public class WordHistoryDataAccessObject implements HistoryDataAccessInterface,
+        TranslateDataAccessInterface, TextSpeechDataAccessInterface {
     private final File csvFile;
     private final Map<String, Integer> headers = new LinkedHashMap<>();
     private final Map<Word, Word>  wordHistory = new LinkedHashMap<>();
@@ -56,10 +58,12 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface, 
         }
     }
 
-    public void save(Word original, Word translated){
-        wordHistory.put(original, translated);
-        insertionOrder.add(original);
-        this.save();
+    public void save(Word original, Word translated) {
+        if (!original.getWord().isEmpty() && !translated.getWord().isEmpty()) {
+            wordHistory.put(original, translated);
+            insertionOrder.add(original);
+            this.save();
+        }
     }
     public void save(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile))) {
@@ -92,5 +96,4 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface, 
         insertionOrder.clear();
         save();  // Save the empty state
     } //is a separate use case
-
 }
