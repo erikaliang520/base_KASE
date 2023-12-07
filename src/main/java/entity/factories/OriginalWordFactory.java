@@ -3,6 +3,8 @@ package entity.factories;
 import entity.Word;
 import entity.OriginalWord;
 import entity.OriginalWordRelated;
+import entity.WordRelated;
+
 import java.util.List;
 
 public class OriginalWordFactory implements WordFactory, OriginalRelatedWordFactory{
@@ -12,7 +14,7 @@ public class OriginalWordFactory implements WordFactory, OriginalRelatedWordFact
     }
 
     @Override
-    public Word createWord(String userWord, String userLanguage, List<String> computedRelatedWords) {
+    public WordRelated createWord(String userWord, String userLanguage, List<String> computedRelatedWords) {
         return new OriginalWordRelated(userWord, userLanguage, computedRelatedWords);
     }
 
