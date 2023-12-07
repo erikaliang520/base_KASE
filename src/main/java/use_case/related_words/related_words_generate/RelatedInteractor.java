@@ -1,6 +1,5 @@
 package use_case.related_words.related_words_generate;
 
-import entity.Word;
 import entity.WordRelated;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.related_words.RelatedWordsSelectionStrategy;
