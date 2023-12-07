@@ -14,7 +14,7 @@ public class RelatedInputData {
         return word;
     }
 
-    String getLanguage(){
+    public String getLanguage(){
         return language;
     }
 
