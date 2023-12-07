@@ -23,7 +23,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.FileInputStream;
 import java.io.IOException;
+
 
 public class TranslateView extends JPanel implements ActionListener, PropertyChangeListener, DocumentListener {
     public final String viewName = "translate";
@@ -203,7 +205,11 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
                 if (e.getSource().equals(listen)) {
                     TextSpeechState currentState = textSpeechViewModel.getState();
 
-                    textSpeechController.execute(currentState.getOriginalText());
+                    try {
+                        textSpeechController.execute(currentState.getOriginalText());
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
 
                 }
             }
@@ -248,10 +254,18 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         } if (evt.getPropertyName().equals("related")) {
             RelatedState state = (RelatedState) evt.getNewValue();
             setFields(state);
+        } if (evt.getPropertyName().equals("speech")) {
+            TextSpeechState state = (TextSpeechState) evt.getNewValue();
+            playAudio(state.getSpokenText());
         }
     }
+
+    private void playAudio(String filePath) {
+        // TODO later
+    }
+
     private void setFields(TranslateState state) {
-        wordInputField.setText(state.getOriginalText());
+        //wordInputField.setText(state.getOriginalText());
     }
 
     private void setFields(RelatedState state) {

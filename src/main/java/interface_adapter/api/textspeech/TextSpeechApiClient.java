@@ -11,9 +11,9 @@ import java.io.OutputStream;
 
 public class TextSpeechApiClient {
 
-    private static final String CREDENTIALS_PATH = "api_key.json";
+    private static final String CREDENTIALS_PATH = "speech_api.json";
 
-    public void synthesizeText(String text) throws IOException {
+    public String synthesizeText(String text) throws IOException {
         GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(CREDENTIALS_PATH));
         TextToSpeechSettings textToSpeechSettings = TextToSpeechSettings.newBuilder()
                 .setCredentialsProvider(() -> credentials)
@@ -38,6 +38,7 @@ public class TextSpeechApiClient {
             try (OutputStream out = new FileOutputStream("output.ogg")) {
                 out.write(audioContents.toByteArray());
                 System.out.println("Audio content written to file \"output.ogg\"");
+                return "output.ogg";
             }
         }
     }

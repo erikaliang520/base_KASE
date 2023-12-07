@@ -13,8 +13,8 @@ public class ExternalTextSpeechService implements TextSpeechService {
 
     @Override
     public String performTextToSpeech(String text) throws IOException {
-        textSpeechApiClient.synthesizeText(text);
-        return text;
+        String audioPath = textSpeechApiClient.synthesizeText(text);
+        return audioPath;
     }
 }
 
