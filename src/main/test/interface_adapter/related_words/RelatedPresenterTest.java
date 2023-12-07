@@ -1,6 +1,6 @@
 package interface_adapter.related_words;
 
-import data_access.testing_DAOs.InMemoryRelatedWordsDAO;
+import data_access.testing_DAOs.testing_DAOs.InMemoryRelatedWordsDAO;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.factories.OriginalWordFactory;
 import entity.related_words.RelatedWordsSelectionStrategy;
