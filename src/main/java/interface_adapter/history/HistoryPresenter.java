@@ -1,15 +1,19 @@
 package interface_adapter.history;
 
 import interface_adapter.ViewManagerModel;
+import interface_adapter.translate.TranslateViewModel;
 import use_case.history.HistoryOutputBoundary;
 import use_case.history.HistoryOutputData;
 
 public class HistoryPresenter implements HistoryOutputBoundary {
+
+    private final TranslateViewModel translateViewModel;
     private final HistoryViewModel historyViewModel;
     private ViewManagerModel viewManagerModel;
 
 
-    public HistoryPresenter(ViewManagerModel viewManagerModel, HistoryViewModel historyViewModel){
+    public HistoryPresenter(TranslateViewModel translateViewModel, ViewManagerModel viewManagerModel, HistoryViewModel historyViewModel){
+        this.translateViewModel = translateViewModel;
         this.historyViewModel = historyViewModel;
         this.viewManagerModel = viewManagerModel;
     }

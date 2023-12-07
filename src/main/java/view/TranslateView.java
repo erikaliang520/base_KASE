@@ -62,6 +62,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
         translateViewModel.addPropertyChangeListener(this);
         relatedViewModel.addPropertyChangeListener(this);
+        historyViewModel.addPropertyChangeListener(this);
 
         JLabel title = new JLabel("Translate");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
