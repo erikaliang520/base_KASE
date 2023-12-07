@@ -1,12 +1,14 @@
 package use_case.related_words.related_words_generate;
 
-import data_access.testing_DAOs.testing_DAOs.InMemoryRelatedWordsDAO;
 import entity.WordRelated;
 import entity.factories.OriginalRelatedWordFactory;
 import entity.factories.OriginalWordFactory;
 import entity.related_words.RelatedWordsSelectionStrategy;
 import interface_adapter.api.datamuse4J.src.datamuse.SynonymStrategy;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,8 +18,13 @@ class RelatedInteractorTest {
     void successTest(){
 
         RelatedInputData relatedInputData = new RelatedInputData("apple", "english");
-        RelatedWordDataAccessInterface relatedWordsRepository = new InMemoryRelatedWordsDAO();
-
+        List<WordRelated> saver = new ArrayList<WordRelated>();
+        RelatedWordDataAccessInterface wordRepository = new RelatedWordDataAccessInterface() {
+            @Override
+            public void save(WordRelated word) {
+                saver.add(word);
+            }
+        };
         RelatedWordsSelectionStrategy strategy = new SynonymStrategy(3);
         OriginalRelatedWordFactory factory = new OriginalWordFactory();
 
@@ -37,7 +44,7 @@ class RelatedInteractorTest {
             }
         };
 
-        RelatedInteractor relatedInteractor = new RelatedInteractor(relatedWordsRepository, successPresenter, strategy, factory);
+        RelatedInteractor relatedInteractor = new RelatedInteractor(wordRepository, successPresenter, strategy, factory);
         relatedInteractor.execute(relatedInputData);
 
     }
@@ -47,7 +54,13 @@ class RelatedInteractorTest {
     @Test
     void failTestWhenNoGeneratedWordsExist() {
         RelatedInputData inputData = new RelatedInputData("abcdefjswfrih", "english");
-        RelatedWordDataAccessInterface wordRepository = new InMemoryRelatedWordsDAO();
+        List<WordRelated> saver = new ArrayList<WordRelated>();
+        RelatedWordDataAccessInterface wordRepository = new RelatedWordDataAccessInterface() {
+            @Override
+            public void save(WordRelated word) {
+                saver.add(word);
+            }
+        };
 
         RelatedWordsSelectionStrategy strategy = new SynonymStrategy(3);
 
