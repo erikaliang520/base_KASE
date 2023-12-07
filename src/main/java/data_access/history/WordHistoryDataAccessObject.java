@@ -30,7 +30,7 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface, 
         this.wordFactoryInput = wordFactoryInput;
         this.wordFactoryOutput = wordFactoryOutput;
 
-        csvFile = new File(csvpath);
+        this.csvFile = new File(csvpath);
         headers.put("original_word", 0);
         headers.put("translated_word", 1);
 

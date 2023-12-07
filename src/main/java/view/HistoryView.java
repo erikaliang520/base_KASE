@@ -35,7 +35,7 @@ public class HistoryView extends JPanel implements ActionListener, PropertyChang
         this.historyViewModel = historyViewModel;
         this.historyViewModel.addPropertyChangeListener(this);
 
-        JLabel title = new JLabel("Word History");
+        JLabel title = new JLabel("History");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         historyTextArea = new JTextArea();
@@ -84,8 +84,7 @@ public class HistoryView extends JPanel implements ActionListener, PropertyChang
 
     public void propertyChange(PropertyChangeEvent evt){
         HistoryState state = (HistoryState) evt.getNewValue();
-        setFields(state);
-
+//        setFields(state);
     }
 
     private void setFields(HistoryState state){}

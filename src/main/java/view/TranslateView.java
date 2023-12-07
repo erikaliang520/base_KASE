@@ -179,7 +179,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("translate")) {
             TranslateState state = (TranslateState) evt.getNewValue();
-            setFields(state);
+//            setFields(state);
         }
     }
     private void setFields(TranslateState state) {
