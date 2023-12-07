@@ -2,18 +2,20 @@ package interface_adapter.textspeech;
 import use_case.textspeech.TextSpeechInputBoundary;
 import use_case.textspeech.TextSpeechInputData;
 
+import java.io.IOException;
+
 
 public class TextSpeechController {
-    private TextSpeechInputBoundary interactor;
+    private TextSpeechInputBoundary textSpeechinteractor;
 
-    public TextSpeechController(TextSpeechInputBoundary interactor) {
-        this.interactor = interactor;
+    public TextSpeechController(TextSpeechInputBoundary textSpeechinteractor) {
+        this.textSpeechinteractor = textSpeechinteractor;
     }
 
 
-    public void convertTextToSpeech(String text) {
+    public void execute(String text) throws IOException {
         TextSpeechInputData inputData = new TextSpeechInputData();
-        interactor.execute(inputData);
+        textSpeechinteractor.execute(inputData);
     }
 }
 

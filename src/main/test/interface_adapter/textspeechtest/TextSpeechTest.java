@@ -15,9 +15,10 @@ class TextSpeechTest {
     public void setUp() {
         textSpeechApiClient = new TextSpeechApiClient(){
             @Override
-            public void synthesizeText(String text) {
+            public String synthesizeText(String text) {
                 // Simulate the behavior of the TextSpeechApiClient
                 // For this example, we're just assuming it does nothing.
+                return text;
             }
         };
         externalTextSpeechService = new ExternalTextSpeechService(textSpeechApiClient);

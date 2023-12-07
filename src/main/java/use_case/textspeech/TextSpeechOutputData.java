@@ -2,17 +2,17 @@ package use_case.textspeech;
 
 
 public class TextSpeechOutputData {
-    private String audioContent;
+    private String audioPath;
 
 
-    public TextSpeechOutputData(String audioContent) {
-        this.audioContent = audioContent;
+    public TextSpeechOutputData(String audioPath) {
+        this.audioPath = audioPath;
     }
 
 
 
-    public String getAudioContent() {
-        return audioContent;
+    public String getAudioPath() {
+        return audioPath;
     }
 }
 

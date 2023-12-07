@@ -9,7 +9,8 @@ public class TextSpeechPresenter implements TextSpeechOutputBoundary {
     private ViewManagerModel viewManagerModel;
     private final TextSpeechViewModel textSpeechViewModel;
 
-    public TextSpeechPresenter(ViewManagerModel viewManagerModel, TextSpeechViewModel textSpeechViewModel) {
+    public TextSpeechPresenter(ViewManagerModel viewManagerModel,
+                               TextSpeechViewModel textSpeechViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.textSpeechViewModel = textSpeechViewModel;
     }
@@ -17,7 +18,7 @@ public class TextSpeechPresenter implements TextSpeechOutputBoundary {
     @Override
     public void prepareTextSpeechSuccessView(TextSpeechOutputData speechData) {
         TextSpeechState textSpeechState = textSpeechViewModel.getState();
-        textSpeechState.setSpokenText(speechData.getAudioContent());
+        textSpeechState.setSpokenText(speechData.getAudioPath());
         this.textSpeechViewModel.setState(textSpeechState);
         this.textSpeechViewModel.firePropertyChanged();
 
