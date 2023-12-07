@@ -7,8 +7,6 @@ import java.beans.PropertyChangeSupport;
 public class HistoryViewModel extends ViewModel {
 
     private HistoryState state = new HistoryState();
-
-    public final String BACK_BUTTON_LABEL = "Back";
     private final PropertyChangeSupport support = new PropertyChangeSupport(this);
 
     public HistoryViewModel(){

@@ -12,7 +12,4 @@ public class HistoryController {
     public void execute(){ historyUseCaseInteractor.execute();
 
     }
-
-    public void navigateBackToTranslate() {
-    }
 }

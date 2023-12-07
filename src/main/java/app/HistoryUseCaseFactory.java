@@ -25,7 +25,7 @@ public class HistoryUseCaseFactory {
             HistoryController historyController = createHistoryUseCase(viewManagerModel,
                     historyViewModel,
                     historyDataAccessObject);
-            return new HistoryView(historyViewModel, historyController);
+            return new HistoryView();
         } catch (IOException e){
             JOptionPane.showMessageDialog(null, "Unable to show history.");
         }
