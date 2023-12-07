@@ -57,6 +57,7 @@ public class Main {
         viewManagerModel.firePropertyChanged();
 
         application.pack();
+        application.setSize(1000, 300);
         application.setVisible(true);
     }
 }

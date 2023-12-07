@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class TranslateApiClient {
     public String Translate(String word) throws IOException {
-        String credentialsPath = "api_key.json";
+        String credentialsPath = "personal_api.json";
 
         com.google.cloud.translate.Translate translate = TranslateOptions.newBuilder()
                 .setCredentials(GoogleCredentials.fromStream(new FileInputStream(credentialsPath)))

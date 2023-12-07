@@ -43,7 +43,7 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
         // only need a display panel for translation...
         JPanel displayInfo = new JPanel();
-        JLabel displayLabel = new JLabel("Display Text: ");
+        JLabel displayLabel = new JLabel("Translation: ");
         displayInfo.add(displayLabel);
 
 
@@ -55,14 +55,11 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         wordInputField.getDocument().addDocumentListener(new DocumentListener() {
             TranslateState currentState = translateViewModel.getState();
             private boolean saveToHistory = false;
-
             private Timer timer;
             @Override
             public void insertUpdate(DocumentEvent e) {
                 try {
                     handleTextChange(currentState.getOriginalText());
-//                    translateController.execute(currentState.getOriginalText());
-//                    displayLabel.setText(translateViewModel.getState().getTranslatedText());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -103,8 +100,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             public void removeUpdate(DocumentEvent e) {
                 try {
                     handleTextChange(currentState.getOriginalText());
-//                    translateController.execute(currentState.getOriginalText());
-//                    displayLabel.setText(translateViewModel.getState().getTranslatedText());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -115,8 +110,6 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
             public void changedUpdate(DocumentEvent e) {
                 try {
                     handleTextChange(currentState.getOriginalText());
-//                    translateController.execute(currentState.getOriginalText());
-//                    displayLabel.setText(translateViewModel.getState().getTranslatedText());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -131,6 +124,10 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
         wordInputField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+                updateState(e);
+            }
+
+            private void updateState(KeyEvent e) {
                 TranslateState currentState = translateViewModel.getState();
                 currentState.setOriginalText(wordInputField.getText() + e.getKeyChar());
                 translateViewModel.setState(currentState);
@@ -138,7 +135,20 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
             @Override
             public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    handleBackspace();
+                } else {
+                    updateState(e);
+                }
+            }
 
+            private void handleBackspace() {
+                TranslateState currentState = translateViewModel.getState();
+                String currentText = wordInputField.getText();
+                if (!currentText.isEmpty()) {
+                    currentState.setOriginalText(currentText.substring(0, currentText.length() - 1));
+                    translateViewModel.setState(currentState);
+                }
             }
 
             @Override
@@ -149,9 +159,14 @@ public class TranslateView extends JPanel implements ActionListener, PropertyCha
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
+        JPanel infoPanel = new JPanel(new FlowLayout());
+
+        // Add components to the infoPanel (on the same line)
+        infoPanel.add(wordInfo);
+        infoPanel.add(displayInfo);
+
         this.add(title);
-        this.add(wordInfo);
-        this.add(displayInfo);
+        this.add(infoPanel);
         this.add(buttons);
     }
 
