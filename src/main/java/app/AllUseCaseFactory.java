@@ -9,7 +9,7 @@ import frameworks_and_drivers.api.google_translate.TranslateApiClient;
 import frameworks_and_drivers.api.textspeech.ExternalTextSpeechService;
 import frameworks_and_drivers.api.textspeech.TextSpeechApiClient;
 import interface_adapter.ViewManagerModel;
-import frameworks_and_drivers.api.*;
+//import frameworks_and_drivers.api.*;
 import interface_adapter.history.HistoryController;
 import interface_adapter.history.HistoryPresenter;
 import interface_adapter.history.HistoryViewModel;

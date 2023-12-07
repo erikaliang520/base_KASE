@@ -1,7 +1,7 @@
 package data_access.history;
 
 import entity.Word;
-import entity.WordRelated;
+// import entity.WordRelated;
 import use_case.history.HistoryDataAccessInterface;
 import use_case.related_words.related_words_generate.RelatedWordDataAccessInterface;
 
@@ -76,9 +76,8 @@ public class RelatedWordsHistoryDataAccessObject implements HistoryDataAccessInt
         save();
     }
 
-
     @Override
-    public void save(WordRelated word) {
+    public void save(Word word) {
 
     }
 }
