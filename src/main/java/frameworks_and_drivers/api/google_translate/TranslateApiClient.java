@@ -1,4 +1,4 @@
-package interface_adapter.api.google_translate;
+package frameworks_and_drivers.api.google_translate;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.translate.Translate;

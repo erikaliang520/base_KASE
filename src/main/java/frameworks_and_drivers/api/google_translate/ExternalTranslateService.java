@@ -1,7 +1,7 @@
-package interface_adapter.api.google_translate;
+package frameworks_and_drivers.api.google_translate;
 
 
-import use_case.ports.api.TranslateService;
+import entity.translate.TranslateService;
 
 import java.io.IOException;
 

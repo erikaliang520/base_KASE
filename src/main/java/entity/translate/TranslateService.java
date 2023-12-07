@@ -1,4 +1,4 @@
-package use_case.ports.api;
+package entity.translate;
 
 import java.io.IOException;
 

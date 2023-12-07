@@ -1,4 +1,4 @@
-package use_case.ports.api;
+package entity.text_to_speech;
 
 import java.io.IOException;
 

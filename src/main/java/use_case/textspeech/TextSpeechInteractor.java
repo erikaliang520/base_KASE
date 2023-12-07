@@ -1,7 +1,7 @@
 package use_case.textspeech;
 
 
-import use_case.ports.api.TextSpeechService;
+import entity.text_to_speech.TextSpeechService;
 
 import java.io.IOException;
 
