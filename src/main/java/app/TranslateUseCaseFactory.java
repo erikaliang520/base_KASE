@@ -30,7 +30,10 @@ public class TranslateUseCaseFactory {
         try {
             TranslateController translateController = createTranslateUseCase(viewManagerModel, translateViewModel,
                     translateDataAccessObject);
-            return new TranslateView(translateViewModel, translateController);
+            return new TranslateView(translateViewModel, translateController,
+                    relatedViewModel, relatedController,
+                    textSpeechViewModel, textSpeechController,
+                    historyViewModel, historyController);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Could not open user data file.");
         }

@@ -56,10 +56,12 @@ public class WordHistoryDataAccessObject implements HistoryDataAccessInterface, 
         }
     }
 
-    public void save(Word original, Word translated){
-        wordHistory.put(original, translated);
-        insertionOrder.add(original);
-        this.save();
+    public void save(Word original, Word translated) {
+        if (!original.getWord().isEmpty() && !translated.getWord().isEmpty()) {
+            wordHistory.put(original, translated);
+            insertionOrder.add(original);
+            this.save();
+        }
     }
     public void save(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile))) {
