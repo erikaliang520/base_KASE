@@ -28,8 +28,10 @@ public class TextSpeechViewModel extends ViewModel {
     }
 
     public void setState(TextSpeechState state) {
+        if(state == null) {
+            throw new IllegalArgumentException("state cannot be null");
+        }
         this.state = state;
     }
 }
-
 
