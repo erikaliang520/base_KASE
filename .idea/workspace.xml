@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="fix to match with new HistoryView">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+    <list default="true" id="b6876075-87bf-4d50-b663-c83664777af4" name="Changes" comment="small bug fixes">
+      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryPresenterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryStateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/test/history/HistoryViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AllUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/ExternalTextSpeechService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/ExternalTextSpeechService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/TextSpeechApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/api/textspeech/TextSpeechApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/textspeech/TextSpeechViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/textspeech/TextSpeechOutputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TranslateView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/TextSpeechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/TextSpeechTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/interface_adapter/textspeechtest/ControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +103,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20231206_0004",
-    "git-widget-placeholder": "TextSpeechButton",
+    "git-widget-placeholder": "history__test",
     "jdk.selected.JAVA_MODULE": "20",
     "last_opened_file_path": "/Users/addisonluo/IdeaProjects/base_KASE",
     "node.js.detected.package.eslint": "true",
@@ -141,7 +131,7 @@
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.HistoryControllerTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="main" />
@@ -162,27 +152,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="base_KASE [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
+    <configuration name="HistoryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interface_adapter.test.history.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="interface_adapter.test.history" />
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.HistoryControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="OriginalWordRelatedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main" />
@@ -199,7 +182,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordHistoryManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordHistoryDataAccessObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main" />
       <extension name="coverage">
         <pattern>
@@ -208,7 +191,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="interface_adapter.test.history" />
-      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.WordHistoryManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.test.history.WordHistoryDataAccessObjectTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -217,17 +200,17 @@
     <list>
       <item itemvalue="Application.TextSpeech" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.base_KASE [dependencies]" />
+      <item itemvalue="JUnit.HistoryControllerTest" />
+      <item itemvalue="JUnit.WordHistoryDataAccessObjectTest" />
       <item itemvalue="JUnit.OriginalWordRelatedTest" />
-      <item itemvalue="JUnit.WordHistoryManagerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HistoryControllerTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.TextSpeech" />
-        <item itemvalue="JUnit.WordHistoryManagerTest" />
+        <item itemvalue="JUnit.WordHistoryDataAccessObjectTest" />
         <item itemvalue="JUnit.OriginalWordRelatedTest" />
-        <item itemvalue="Gradle.base_KASE [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -286,21 +269,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701924344546</updated>
     </task>
-    <task id="LOCAL-00005" summary="placing entities into entity package">
+    <task id="LOCAL-00005" summary="uncomment HistoryUseCaseFactory">
       <option name="closed" value="true" />
-      <created>1701320965242</created>
+      <created>1701928636492</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1701320965242</updated>
+      <updated>1701928636492</updated>
     </task>
-    <task id="LOCAL-00006" summary="changed the mapping inputs for WordHistoryManager from String to Word. This way, we can make use of our word interface.">
+    <task id="LOCAL-00006" summary="small bug fixes">
       <option name="closed" value="true" />
-      <created>1701380010682</created>
+      <created>1701929707551</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1701380010682</updated>
+      <updated>1701929707551</updated>
     </task>
     <task id="LOCAL-00007" summary="Refactoring History Manager files and testing files">
       <option name="closed" value="true" />
@@ -342,7 +325,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701655597436</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +359,8 @@
     <MESSAGE value="bug fix for translate Api calls, APIClient will use my personal api key that will not be pushed with this commit" />
     <MESSAGE value="finished changes in All use case factory, updated main to use this factory" />
     <MESSAGE value="fix to match with new HistoryView" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix to match with new HistoryView" />
+    <MESSAGE value="uncomment HistoryUseCaseFactory" />
+    <MESSAGE value="small bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small bug fixes" />
   </component>
 </project>
