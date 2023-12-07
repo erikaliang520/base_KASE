@@ -35,5 +35,3 @@ public class TextSpeechViewModel extends ViewModel {
     }
 }
 
-
-
