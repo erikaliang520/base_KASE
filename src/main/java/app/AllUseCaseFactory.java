@@ -7,6 +7,8 @@ import interface_adapter.ViewManagerModel;
 import interface_adapter.api.datamuse4J.src.datamuse.SynonymStrategy;
 import interface_adapter.api.google_translate.ExternalTranslateService;
 import interface_adapter.api.google_translate.TranslateApiClient;
+import interface_adapter.api.textspeech.ExternalTextSpeechService;
+import interface_adapter.api.textspeech.TextSpeechApiClient;
 import interface_adapter.history.HistoryController;
 import interface_adapter.history.HistoryPresenter;
 import interface_adapter.history.HistoryViewModel;
@@ -164,8 +166,10 @@ public class AllUseCaseFactory {
 
         TextSpeechOutputBoundary textSpeechOutputBoundary = new TextSpeechPresenter(viewManagerModel, textSpeechViewModel);
 
+        ExternalTextSpeechService speechService = new ExternalTextSpeechService(new TextSpeechApiClient());
+
         TextSpeechInputBoundary textSpeechInteractor = new TextSpeechInteractor(textSpeechDataAccessObject,
-                textSpeechOutputBoundary);
+                textSpeechOutputBoundary, speechService);
 
         return new TextSpeechController(textSpeechInteractor);
     }

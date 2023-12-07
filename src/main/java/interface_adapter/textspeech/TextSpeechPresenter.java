@@ -18,7 +18,7 @@ public class TextSpeechPresenter implements TextSpeechOutputBoundary {
     @Override
     public void prepareTextSpeechSuccessView(TextSpeechOutputData speechData) {
         TextSpeechState textSpeechState = textSpeechViewModel.getState();
-        textSpeechState.setSpokenText(speechData.getAudioContent());
+        textSpeechState.setSpokenText(speechData.getAudioPath());
         this.textSpeechViewModel.setState(textSpeechState);
         this.textSpeechViewModel.firePropertyChanged();
 
